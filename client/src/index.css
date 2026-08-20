@@ -57,10 +57,10 @@ a {
 
 .walk-header {
     align-items: center;
-    background: rgba(10, 10, 10, .04);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(20px) saturate(.82);
-    border-bottom: 1px solid rgba(255, 255, 255, 0);
-    color: #787878;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    color: #171717;
     display: flex;
     height: 62px;
     justify-content: center;
@@ -74,9 +74,9 @@ a {
 }
 
 .walk-header.is-scrolled {
-    background: rgba(255, 255, 255, 0);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(22px) saturate(.68);
-    border-color: rgba(255, 255, 255, 0.614)
+    border-color: rgba(0, 0, 0, 0.1)
 }
 
 .walk-header>button {
@@ -174,7 +174,7 @@ a {
 .hero-copy h1 {
     font-family: var(--serif);
     font-size: 56px;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: .08em;
     line-height: .78;
     margin: 0 0 18px
