@@ -1,0 +1,19 @@
+// Style reminder: replicate Sobha's cinematic luxury editorial experience with a dark, image-first stage and restrained transitions.
+import { useLocation } from "wouter";
+import Home from "./pages/Home";
+import Developer from "./pages/Developer";
+import Projects from "./pages/Projects";
+
+export default function App() {
+  const [location] = useLocation();
+
+  if (location === "/projects") {
+    return <Projects />;
+  }
+
+  if (location === "/developer") {
+    return <Developer />;
+  }
+
+  return <Home />;
+}
