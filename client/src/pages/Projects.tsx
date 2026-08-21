@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
+import { animateFooter } from "@/utils/sectionAnimations";
 
 const img = { logo: "https://royal-swiss-city-30.vercel.app/logo.png" };
 const nav = ["HOME", "THE CITY", "DEVELOPER", "LOCATION", "FAQ", "PARTNER", "DEALER", "ENQUIRE"];
@@ -86,6 +87,11 @@ export default function Projects() {
     document.querySelectorAll(".reveal-section,.reveal-item").forEach(n => o.observe(n)); 
     return () => o.disconnect() 
   }, [filteredProjects]);
+
+  useEffect(() => {
+    const footerElement = document.querySelector(".walk-footer.reveal-section");
+    if (footerElement) animateFooter(footerElement);
+  }, []);
 
   return <main className="walkthrough-page">
     <header className={`walk-header ${scrolled ? "is-scrolled" : ""}`}>

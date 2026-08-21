@@ -122,7 +122,7 @@ export function ArchedSheet() {
             }}
           >
             WHERE LIFE<br />
-            <em style={{ fontStyle: "italic", fontSize: "1em" }}>UNFOLDS.</em>
+            <em style={{ fontStyle: "italic", fontSize: "1em" }}>HAPPENS.</em>
           </h2>
 
           <div className="space-y-3 text-gray-700">

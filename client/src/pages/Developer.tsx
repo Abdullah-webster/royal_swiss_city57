@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { ChevronDown, ChevronRight, Menu, X, ArrowDown } from "lucide-react";
+import { animateFeaturesSection, animateFooter } from "@/utils/sectionAnimations";
 
 const img = { logo: "https://royal-swiss-city-30.vercel.app/logo.png", heroDesktop: "/hero-dev-desktop.jpg", heroMobile: "/hero-dev-mobile.jpg", chairman: "/chairman.png", ceo: "/ceo.png" };
 const nav = ["HOME", "THE CITY", "DEVELOPER", "LOCATION", "FAQ", "PARTNER", "DEALER", "ENQUIRE"];
@@ -43,6 +44,14 @@ export default function Developer() {
     const o = new IntersectionObserver(es => es.forEach(e => e.isIntersecting && e.target.classList.add("is-visible")), { threshold: .12, rootMargin: "0px 0px -10% 0px" }); 
     document.querySelectorAll(".reveal-section,.reveal-item").forEach(n => o.observe(n)); 
     return () => o.disconnect() 
+  }, []);
+
+  useEffect(() => {
+    const featuresElement = document.querySelector(".features-section");
+    const footerElement = document.querySelector(".walk-footer.reveal-section");
+
+    if (featuresElement) animateFeaturesSection(featuresElement);
+    if (footerElement) animateFooter(footerElement);
   }, []);
 
   const vh = typeof window !== "undefined" ? window.innerHeight : 800;
