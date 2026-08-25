@@ -1044,16 +1044,19 @@ a {
     background: #151515;
     color: #fff;
     min-height: 760px;
-    padding: 86px 7vw;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding: 86px 0;
     position: relative;
     z-index: 3;
     opacity: 0;
     transform: translateY(120px) scale(0.88);
     perspective: 1200px;
+    overflow: hidden;
 }
 
 .vision-copy {
-    margin-left: 8vw;
+    margin-left: 7vw;
     max-width: 560px
 }
 
@@ -1181,16 +1184,19 @@ a {
 
 .legacy-section {
     background: #fff;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
     padding: 9vw 8vw;
     position: relative;
     z-index: 3;
+    overflow: hidden;
     opacity: 0;
     transform: rotateX(20deg) translateY(100px) scale(0.92);
     perspective: 1200px;
 }
 
 .legacy-copy {
-    max-width: 700px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -1896,21 +1902,9 @@ a {
     display: flex;
     gap: 25px;
     margin-top: 72px;
-    width: 100%;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory;
-    padding-left: 0;
-    padding-right: 0;
-    scroll-behavior: smooth;
+    width: fit-content;
+    overflow: hidden;
     position: relative;
-    scrollbar-width: none;
-    -ms-overflow-style: none
-}
-
-.showcase-rail::-webkit-scrollbar {
-    display: none
 }
 
 .scroll-hint {
@@ -1949,10 +1943,10 @@ a {
     height: 500px;
     overflow: hidden;
     position: relative;
-    width: 465px;
+    width: 1000px;
     scroll-snap-align: start;
     flex-shrink: 0;
-    min-width: 465px
+    min-width: 1000px
 }
 
 .showcase-card img {
@@ -2049,10 +2043,8 @@ a {
     .showcase-rail {
         gap: 14px;
         margin-top: 46px;
-        overflow-x: auto;
-        overflow-y: hidden;
-        -webkit-overflow-scrolling: touch;
-        scroll-snap-type: x mandatory;
+        overflow: hidden;
+        scroll-snap-type: none;
         padding-left: 0;
         padding-right: 0
     }
@@ -2691,68 +2683,61 @@ a {
 }
 
 /* Vision scene animation */
-.vision-scene.is-visible {
-    animation: slideInFromLeft 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+/* ALL ANIMATIONS DISABLED - GSAP CONTROLLED ONLY */
+
+/* Vision scene animation - DISABLED FOR GSAP */
+.vision-scene {
+    animation: none !important;
+    width: 100vw !important;
+    margin-left: calc(-50vw + 50%) !important;
+    overflow: hidden !important;
+}
+.vision-scene * {
+    animation: none !important;
+    transition: none !important;
 }
 
-/* Legacy section animation */
-.legacy-section.is-visible .legacy-copy {
-    animation: slideUpWithFade 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+/* Legacy section animation - DISABLED FOR GSAP */
+.legacy-section {
+    animation: none !important;
+}
+.legacy-section * {
+    animation: none !important;
+    transition: none !important;
 }
 
-.legacy-section.is-visible .legacy-card {
-    animation: fadeInScale 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+/* Showcase section animation - DISABLED FOR GSAP */
+.showcase-section {
+    animation: none !important;
+}
+.showcase-section * {
+    animation: none !important;
+    transition: none !important;
 }
 
-/* Showcase section animation */
-.showcase-section.is-visible .showcase-heading {
-    animation: slideUpWithFade 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+/* Features section animation - DISABLED FOR GSAP */
+.features-section {
+    animation: none !important;
+}
+.features-section * {
+    animation: none !important;
+    transition: none !important;
 }
 
-.showcase-section.is-visible .showcase-card {
-    animation: rotateInScale 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+/* Partner section animation - DISABLED FOR GSAP */
+.partner-strip {
+    animation: none !important;
+}
+.partner-strip * {
+    animation: none !important;
+    transition: none !important;
 }
 
-/* Features section animation */
-.features-section.is-visible > h2 {
-    animation: slideInFromLeft 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+/* Enquire section - DISABLED FOR GSAP */
+.enquire-section {
+    animation: none !important;
 }
-
-.features-section.is-visible .feature {
-    animation: staggerFadeIn 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-/* Partner section animation */
-.partner-strip.is-visible img {
-    animation: slideInFromLeft 0.9s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.partner-strip.is-visible > div {
-    animation: slideInFromRight 0.9s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-/* Enquire section - no animation, handled by GSAP */
-.enquire-section.is-visible h2 {
-    animation: none;
-}
-
-.enquire-section.is-visible > p:not(.section-kicker) {
-    animation: none;
-}
-
-.enquire-section.is-visible > div {
-    animation: none;
-}
-
-/* Footer animation */
-.walk-footer.is-visible > .sobha-logo {
-    animation: slideUpWithFade 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.walk-footer.is-visible .footer-accordions {
-    animation: fadeInScale 0.8s cubic-bezier(0.23, 1, 0.32, 1) 0.2s backwards;
-}
-
-.walk-footer.is-visible .footer-contact {
-    animation: slideUpWithFade 0.8s cubic-bezier(0.23, 1, 0.32, 1) 0.4s backwards;
+.enquire-section * {
+    animation: none !important;
+    transition: none !important;
 }
