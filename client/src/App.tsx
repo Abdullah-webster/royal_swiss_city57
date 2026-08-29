@@ -3,6 +3,7 @@ import { useLocation } from "wouter";
 import Home from "./pages/Home";
 import Developer from "./pages/Developer";
 import Projects from "./pages/Projects";
+import Enquire from "./pages/Enquire";
 
 export default function App() {
   const [location] = useLocation();
@@ -13,6 +14,10 @@ export default function App() {
 
   if (location === "/developer") {
     return <Developer />;
+  }
+
+  if (location === "/enquire") {
+    return <Enquire />;
   }
 
   return <Home />;

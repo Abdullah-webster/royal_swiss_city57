@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { ChevronDown, ChevronRight, Menu, X, ArrowDown } from "lucide-react";
 import { animateFeaturesSection, animateFooter } from "@/utils/sectionAnimations";
+import { ProjectsCarousel } from "@/components/ProjectsCarousel";
 
 const img = { logo: "https://royal-swiss-city-30.vercel.app/logo.png", heroDesktop: "/hero-dev-desktop.jpg", heroMobile: "/hero-dev-mobile.jpg", chairman: "/chairman.png", ceo: "/ceo.png" };
 const nav = ["HOME", "THE CITY", "DEVELOPER", "LOCATION", "FAQ", "PARTNER", "DEALER", "ENQUIRE"];
@@ -22,6 +23,8 @@ export default function Developer() {
   const [scrolled, setScrolled] = useState(false);
   const [scrollY, setScrollY] = useState(0);
   const [openFooter, setOpenFooter] = useState<string | null>(null);
+  const [expandedFeature, setExpandedFeature] = useState<number | null>(null);
+  const isMobileView = typeof window !== "undefined" ? window.innerWidth <= 760 : false;
 
   useEffect(() => { 
     let f = 0; 
@@ -76,24 +79,29 @@ export default function Developer() {
         <p className="hero-kicker">SIX DECADES OF ENGINEERING EXCELLENCE</p>
         <h1>HABIB<br /><span>RAFIQ</span></h1>
         <p>Transforming vision into reality through innovation, quality, and dedication.<br />Building infrastructure that shapes nations.</p>
-        <a href="#projects">EXPLORE OUR PORTFOLIO</a>
+        <a href="/projects">EXPLORE OUR PORTFOLIO</a>
       </div>
       <div className="hero-scroll"><span>SCROLL TO EXPLORE</span><ArrowDown size={14} /></div>
     </section>
 
-    <section id="about" className="vision-scene reveal-section">
-      <div className="section-index">01 / 04</div>
-      <div className="vision-copy">
-        <p className="section-kicker">OUR LEGACY</p>
-        <h2>More than 60 Years<br /><em>of Excellence.</em></h2>
-        <p>Habib Rafiq (Pvt.) Limited (HRL) is a leading Pakistan-based engineering and construction company with a distinguished legacy spanning more than six decades. Built on a strong foundation of customer satisfaction, professional excellence, and the successful delivery of projects of national and international importance.</p>
-        <p>Over the years, HRL has developed extensive multidisciplinary expertise across civil, mechanical, and electrical engineering, enabling it to undertake and deliver projects of significant scale, complexity, and strategic importance.</p>
-        <div className="metric-grid">
-          <div className="metric reveal-item"><strong>60+</strong><span>YEARS OF EXPERIENCE</span></div>
-          <div className="metric reveal-item"><strong>500+</strong><span>MAJOR PROJECTS</span></div>
-          <div className="metric reveal-item"><strong>4</strong><span>REGIONAL OFFICES</span></div>
-          <div className="metric reveal-item"><strong>100%</strong><span>ON-TIME DELIVERY</span></div>
+    <section id="about" className="vision-scene reveal-section" style={{ display: isMobileView ? "block" : "grid", gridTemplateColumns: isMobileView ? "auto" : "1fr 1fr", gap: isMobileView ? "0" : "6vw", alignItems: isMobileView ? "auto" : "center" }}>
+      <div style={{ order: isMobileView ? "2" : "1" }}>
+        <div className="section-index">01 / 04</div>
+        <div className="vision-copy">
+          <p className="section-kicker">OUR LEGACY</p>
+          <h2>More than 60 Years<br /><em>of Excellence.</em></h2>
+          <p>Habib Rafiq (Pvt.) Limited (HRL) is a leading Pakistan-based engineering and construction company with a distinguished legacy spanning more than six decades. Built on a strong foundation of customer satisfaction, professional excellence, and the successful delivery of projects of national and international importance.</p>
+          <p>Over the years, HRL has developed extensive multidisciplinary expertise across civil, mechanical, and electrical engineering, enabling it to undertake and deliver projects of significant scale, complexity, and strategic importance.</p>
+          <div className="metric-grid">
+            <div className="metric reveal-item"><strong>60+</strong><span>YEARS OF EXPERIENCE</span></div>
+            <div className="metric reveal-item"><strong>500+</strong><span>MAJOR PROJECTS</span></div>
+            <div className="metric reveal-item"><strong>4</strong><span>REGIONAL OFFICES</span></div>
+            <div className="metric reveal-item"><strong>100%</strong><span>ON-TIME DELIVERY</span></div>
+          </div>
         </div>
+      </div>
+      <div style={{ order: isMobileView ? "1" : "2", marginTop: isMobileView ? "50px" : "0" }}>
+        <ProjectsCarousel isMobileView={isMobileView} />
       </div>
     </section>
 
@@ -117,14 +125,14 @@ export default function Developer() {
       <p className="section-kicker">03 / AREAS OF EXPERTISE</p>
       <h2>COMPREHENSIVE<br /><em>CAPABILITIES.</em></h2>
       <div className="feature-grid">
-        <article className="feature reveal-item"><span>01</span><h3>Infrastructure</h3><p>Roads, motorways, bridges, and large-scale land development with integrated utilities, drainage and water systems.</p></article>
-        <article className="feature reveal-item"><span>02</span><h3>Housing</h3><p>Master-planned communities with complete infrastructure, sewerage, water supply and electrification networks.</p></article>
-        <article className="feature reveal-item"><span>03</span><h3>Buildings</h3><p>Commercial, residential, institutional and high-rise developments with MEP and comprehensive building services.</p></article>
-        <article className="feature reveal-item"><span>04</span><h3>Industrial</h3><p>Power plants, refineries, and process-industry facilities with complex mechanical and electrical systems.</p></article>
-        <article className="feature reveal-item"><span>05</span><h3>Aviation</h3><p>Airports and aviation facilities development including passenger systems and airport infrastructure.</p></article>
-        <article className="feature reveal-item"><span>06</span><h3>Oil & Gas</h3><p>Oil refineries, upgradation projects and oil and gas infrastructure across Pakistan and Gulf region.</p></article>
-        <article className="feature reveal-item"><span>07</span><h3>Environmental</h3><p>Wastewater treatment plants, sewage treatment and environmental infrastructure solutions.</p></article>
-        <article className="feature reveal-item"><span>08</span><h3>Water Resources</h3><p>Canals, reservoirs, water management and utility network engineering across multiple regions.</p></article>
+        <article className="feature reveal-item" onClick={() => isMobileView && setExpandedFeature(expandedFeature === 0 ? null : 0)} style={{ cursor: isMobileView ? "pointer" : "default" }}><span>01</span><div className="feature-header"><h3>Infrastructure</h3>{isMobileView && <ChevronDown size={16} className="feature-arrow" style={{ transform: expandedFeature === 0 ? "rotate(180deg)" : "rotate(0deg)" }} />}</div><p style={{ display: isMobileView && expandedFeature !== 0 ? "none" : "block" }}>Roads, motorways, bridges, and large-scale land development with integrated utilities, drainage and water systems.</p></article>
+        <article className="feature reveal-item" onClick={() => isMobileView && setExpandedFeature(expandedFeature === 1 ? null : 1)} style={{ cursor: isMobileView ? "pointer" : "default" }}><span>02</span><div className="feature-header"><h3>Housing</h3>{isMobileView && <ChevronDown size={16} className="feature-arrow" style={{ transform: expandedFeature === 1 ? "rotate(180deg)" : "rotate(0deg)" }} />}</div><p style={{ display: isMobileView && expandedFeature !== 1 ? "none" : "block" }}>Master-planned communities with complete infrastructure, sewerage, water supply and electrification networks.</p></article>
+        <article className="feature reveal-item" onClick={() => isMobileView && setExpandedFeature(expandedFeature === 2 ? null : 2)} style={{ cursor: isMobileView ? "pointer" : "default" }}><span>03</span><div className="feature-header"><h3>Buildings</h3>{isMobileView && <ChevronDown size={16} className="feature-arrow" style={{ transform: expandedFeature === 2 ? "rotate(180deg)" : "rotate(0deg)" }} />}</div><p style={{ display: isMobileView && expandedFeature !== 2 ? "none" : "block" }}>Commercial, residential, institutional and high-rise developments with MEP and comprehensive building services.</p></article>
+        <article className="feature reveal-item" onClick={() => isMobileView && setExpandedFeature(expandedFeature === 3 ? null : 3)} style={{ cursor: isMobileView ? "pointer" : "default" }}><span>04</span><div className="feature-header"><h3>Industrial</h3>{isMobileView && <ChevronDown size={16} className="feature-arrow" style={{ transform: expandedFeature === 3 ? "rotate(180deg)" : "rotate(0deg)" }} />}</div><p style={{ display: isMobileView && expandedFeature !== 3 ? "none" : "block" }}>Power plants, refineries, and process-industry facilities with complex mechanical and electrical systems.</p></article>
+        <article className="feature reveal-item" onClick={() => isMobileView && setExpandedFeature(expandedFeature === 4 ? null : 4)} style={{ cursor: isMobileView ? "pointer" : "default" }}><span>05</span><div className="feature-header"><h3>Aviation</h3>{isMobileView && <ChevronDown size={16} className="feature-arrow" style={{ transform: expandedFeature === 4 ? "rotate(180deg)" : "rotate(0deg)" }} />}</div><p style={{ display: isMobileView && expandedFeature !== 4 ? "none" : "block" }}>Airports and aviation facilities development including passenger systems and airport infrastructure.</p></article>
+        <article className="feature reveal-item" onClick={() => isMobileView && setExpandedFeature(expandedFeature === 5 ? null : 5)} style={{ cursor: isMobileView ? "pointer" : "default" }}><span>06</span><div className="feature-header"><h3>Oil & Gas</h3>{isMobileView && <ChevronDown size={16} className="feature-arrow" style={{ transform: expandedFeature === 5 ? "rotate(180deg)" : "rotate(0deg)" }} />}</div><p style={{ display: isMobileView && expandedFeature !== 5 ? "none" : "block" }}>Oil refineries, upgradation projects and oil and gas infrastructure across Pakistan and Gulf region.</p></article>
+        <article className="feature reveal-item" onClick={() => isMobileView && setExpandedFeature(expandedFeature === 6 ? null : 6)} style={{ cursor: isMobileView ? "pointer" : "default" }}><span>07</span><div className="feature-header"><h3>Environmental</h3>{isMobileView && <ChevronDown size={16} className="feature-arrow" style={{ transform: expandedFeature === 6 ? "rotate(180deg)" : "rotate(0deg)" }} />}</div><p style={{ display: isMobileView && expandedFeature !== 6 ? "none" : "block" }}>Wastewater treatment plants, sewage treatment and environmental infrastructure solutions.</p></article>
+        <article className="feature reveal-item" onClick={() => isMobileView && setExpandedFeature(expandedFeature === 7 ? null : 7)} style={{ cursor: isMobileView ? "pointer" : "default" }}><span>08</span><div className="feature-header"><h3>Water Resources</h3>{isMobileView && <ChevronDown size={16} className="feature-arrow" style={{ transform: expandedFeature === 7 ? "rotate(180deg)" : "rotate(0deg)" }} />}</div><p style={{ display: isMobileView && expandedFeature !== 7 ? "none" : "block" }}>Canals, reservoirs, water management and utility network engineering across multiple regions.</p></article>
       </div>
     </section>
 

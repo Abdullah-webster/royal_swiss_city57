@@ -8,8 +8,19 @@ gsap.registerPlugin(ScrollTrigger);
 
 const img = { hero: "/city-aerial.jpg" };
 
+// Preload image
+const preloadImage = (src: string) => {
+  const image = new Image();
+  image.src = src;
+};
+
 export function HeroCapsuleAnimation() {
   const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // Preload the image immediately
+    preloadImage("/where-life-unfolds.jpg");
+  }, []);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -162,6 +173,9 @@ export function HeroCapsuleAnimation() {
           }
         }
       `}</style>
+      {/* PRELOAD IMAGE - Render immediately but hide off-screen */}
+      
+
       <div
         className="hero-capsule-pin"
         style={{
@@ -182,17 +196,19 @@ export function HeroCapsuleAnimation() {
             zIndex: 1,
           }}
         >
-          <picture style={{ position: "absolute", inset: 0 }}>
-            <img
-              src={img.hero}
-              alt="Royal Swiss City riverfront masterplan in Lahore"
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-              }}
-            />
-          </picture>
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/EJ8V7zrPcM0?autoplay=1&mute=1&loop=1&playlist=EJ8V7zrPcM0&controls=0&modestbranding=1&rel=0"
+            title="Royal Swiss City"
+            style={{
+              position: "absolute",
+              inset: 0,
+              border: "none",
+            }}
+            allow="autoplay; fullscreen"
+            frameBorder="0"
+          />
           <div
             className="hero-shade"
             style={{
@@ -269,6 +285,15 @@ export function HeroCapsuleAnimation() {
                 letterSpacing: "2px",
                 textTransform: "uppercase",
                 background: window.matchMedia("(max-width: 768px)").matches ? "#000" : "transparent",
+                transition: "all 0.3s ease",
+              }}
+              onMouseEnter={(e) => {
+                (e.target as HTMLElement).style.opacity = "0.7";
+                (e.target as HTMLElement).style.transform = "translateY(-2px)";
+              }}
+              onMouseLeave={(e) => {
+                (e.target as HTMLElement).style.opacity = "1";
+                (e.target as HTMLElement).style.transform = "translateY(0)";
               }}
             >
               DISCOVER THE CITY
@@ -321,72 +346,110 @@ export function HeroCapsuleAnimation() {
             style={{
               width: "100%",
               height: "100%",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              textAlign: "center",
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              gridTemplateRows: "1fr",
+              gap: "0",
               color: "#111",
-              opacity: 1,
-              transform: "translateY(0)",
             }}
           >
+            {/* TEXT ON LEFT - Always rendered */}
             <div
-              className="art-content-inner"
+              className="art-content-fullscreen-text"
               style={{
-                maxWidth: "850px",
-                padding: "30px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                padding: "60px 40px",
+                color: "#111",
+                opacity: 1,
+                transition: "opacity 0.3s ease",
+                gridColumn: 1,
+                gridRow: 1,
+                pointerEvents: "auto",
               }}
             >
-              <h2
+              <div style={{ maxWidth: "400px" }}>
+                <h2
+                  style={{
+                    fontSize: "4rem",
+                    fontWeight: 400,
+                    letterSpacing: "-0.06em",
+                    marginBottom: "20px",
+                    color: "#111",
+                    lineHeight: 1.1,
+                    fontFamily: "var(--serif)",
+                  }}
+                >
+                  Where Life Unfolds
+                </h2>
+                <p
+                  style={{
+                    fontSize: "1rem",
+                    lineHeight: 1.7,
+                    color: "#333",
+                    marginTop: "20px",
+                  }}
+                >
+                  Royal Swiss City brings a different kind of presence to
+                  Lahore's next horizon. Set within the Ravi Riverfront vision,
+                  it pairs a secure, planned setting with generous landscapes,
+                  carefully considered streets, and the everyday ease of a
+                  complete community.
+                </p>
+                <a
+                  href="#"
+                  style={{
+                    display: "inline-block",
+                    marginTop: "32px",
+                    padding: "15px 28px",
+                    border: "2px solid #111",
+                    borderRadius: "999px",
+                    color: "#111",
+                    textDecoration: "none",
+                    fontSize: "12px",
+                    letterSpacing: "2px",
+                    textTransform: "uppercase",
+                    background: "transparent",
+                    cursor: "pointer",
+                    transition: "all 0.3s ease",
+                  }}
+                  onMouseEnter={(e) => {
+                    (e.target as HTMLElement).style.opacity = "0.7";
+                    (e.target as HTMLElement).style.transform = "translateY(-2px)";
+                  }}
+                  onMouseLeave={(e) => {
+                    (e.target as HTMLElement).style.opacity = "1";
+                    (e.target as HTMLElement).style.transform = "translateY(0)";
+                  }}
+                >
+                  Discover More
+                </a>
+              </div>
+            </div>
+
+            {/* IMAGE ON RIGHT - Always rendered and visible */}
+            <div
+              className="art-content-fullscreen-image"
+              style={{
+                overflow: "hidden",
+                background: "#f0f0f0",
+                opacity: 1,
+                transition: "opacity 0.3s ease",
+                gridColumn: 2,
+                gridRow: 1,
+              }}
+            >
+              <img
+                src="/where-life-unfolds.jpg"
+                alt="Where Life Unfolds"
                 style={{
-                  fontSize: "12px",
-                  fontWeight: 400,
-                  letterSpacing: "-0.06em",
-                  marginBottom: "0px",
-                  color: "#111",
-                  lineHeight: 1.2,
-                  fontFamily: "var(--serif)",
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  objectPosition: "center",
                 }}
-              >
-                Where Life Unfolds
-              </h2>
-              <p
-                style={{
-                  maxWidth: "650px",
-                  margin: "auto",
-                  lineHeight: 1,
-                  fontSize: "0.8rem",
-                  color: "#333",
-                  opacity: 0,
-                  marginTop: "12px",
-                }}
-              >
-                Royal Swiss City brings a different kind of presence to
-                Lahore's next horizon. Set within the Ravi Riverfront vision,
-                it pairs a secure, planned setting with generous landscapes,
-                carefully considered streets, and the everyday ease of a
-                complete community.
-              </p>
-              <a
-                className="discover"
-                href="#"
-                style={{
-                  display: "inline-block",
-                  marginTop: "32px",
-                  padding: "15px 28px",
-                  border: "2px solid #111",
-                  borderRadius: "999px",
-                  color: "#111",
-                  textDecoration: "none",
-                  fontSize: "12px",
-                  letterSpacing: "2px",
-                  textTransform: "uppercase",
-                  background: "transparent",
-                  cursor: "pointer",
-                }}
-              >
-                Discover More
-              </a>
+              />
             </div>
           </div>
         </div>
@@ -473,6 +536,15 @@ export function HeroCapsuleAnimation() {
                   textTransform: "uppercase",
                   background: "transparent",
                   cursor: "pointer",
+                  transition: "all 0.3s ease",
+                }}
+                onMouseEnter={(e) => {
+                  (e.target as HTMLElement).style.opacity = "0.7";
+                  (e.target as HTMLElement).style.transform = "translateY(-2px)";
+                }}
+                onMouseLeave={(e) => {
+                  (e.target as HTMLElement).style.opacity = "1";
+                  (e.target as HTMLElement).style.transform = "translateY(0)";
                 }}
               >
                 Discover More
