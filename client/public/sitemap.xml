@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://royalswisscity.com/</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://royalswisscity.com/city-aerial.jpg</image:loc>
+      <image:title>Royal Swiss City Lahore - Aerial View of Master Planned Community</image:title>
+      <image:caption>Premium residential and commercial plots in Royal Swiss City, a master-planned housing society developed by Habib Rafiq (Pvt) Ltd in Lahore, Pakistan</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://royalswisscity.com/infrastructure.jpg</image:loc>
+      <image:title>Royal Swiss City Infrastructure Development</image:title>
+      <image:caption>Modern infrastructure and wide boulevards in Royal Swiss City housing society</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://royalswisscity.com/green-energy.jpg</image:loc>
+      <image:title>Solar Infrastructure at Royal Swiss City</image:title>
+      <image:caption>Sustainable solar energy infrastructure and eco-friendly amenities</image:caption>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://royalswisscity.com/developer</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://royalswisscity.com/hrl-building.jpg</image:loc>
+      <image:title>Habib Rafiq Engineering - 60 Years of Excellence</image:title>
+      <image:caption>Habib Rafiq (Pvt) Ltd - Leading engineering and construction company in Pakistan with over six decades of experience</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://royalswisscity.com/chairman.png</image:loc>
+      <image:title>Shahid Rafiq - Chairman of Habib Rafiq (Pvt) Ltd</image:title>
+      <image:caption>Leadership and vision behind Royal Swiss City development</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://royalswisscity.com/ceo.png</image:loc>
+      <image:title>Sohaib Hassan - Chief Executive of HRL</image:title>
+      <image:caption>Driving real estate excellence and sustainable community development</image:caption>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://royalswisscity.com/projects</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://royalswisscity.com/lahore-ring-road-package-3-wide.webp</image:loc>
+      <image:title>HRL Infrastructure Projects - Lahore Ring Road</image:title>
+      <image:caption>Major infrastructure development by Habib Rafiq showcasing engineering expertise</image:caption>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://royalswisscity.com/enquire</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+</urlset>

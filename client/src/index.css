@@ -1,4 +1,3 @@
-/* Style reminder: faithful Sobha walkthrough recreation — light mobile editorial sections, full-bleed The Woods hero, exact outlined pills, black accordions, and persistent bottom action bar. */
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -285,7 +284,7 @@ a {
 
 .detail-card__copy h2 {
     font-family: Arial, sans-serif;
-    font-size: 25px;
+    font-size: 18px;
     letter-spacing: -.035em;
     line-height: .9;
     margin: 0 0 38px
@@ -293,7 +292,7 @@ a {
 
 .detail-card__copy h2 em {
     font-family: var(--serif);
-    font-size: 35px;
+    font-size: 26px;
     font-weight: 500
 }
 
@@ -386,7 +385,7 @@ a {
 
 .pillar-card h3 {
     font-family: var(--serif);
-    font-size: 35px;
+    font-size: 24px;
     font-weight: 400;
     line-height: .9;
     margin: 20px 0 20px
@@ -470,7 +469,7 @@ a {
 
 .property-logo span {
     font-family: var(--serif);
-    font-size: 44px
+    font-size: 32px
 }
 
 .property-logo b {
@@ -576,7 +575,7 @@ a {
 
 .press article h3 {
     font-family: var(--serif);
-    font-size: 25px;
+    font-size: 18px;
     font-weight: 400;
     line-height: 1;
     margin: 12px 0
@@ -663,7 +662,7 @@ a {
 
 .footer-contact b {
     font-family: var(--serif);
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 400
 }
 
@@ -873,7 +872,7 @@ a {
     }
 
     .hero-copy h1 {
-        font-size: 90px
+        font-size: 60px
     }
 
     .detail-card {
@@ -963,7 +962,7 @@ a {
 
     .partner-strip h2 {
         font-family: var(--serif);
-        font-size: clamp(40px, 5vw, 70px);
+        font-size: clamp(32px, 4vw, 55px);
         font-weight: 300;
         line-height: .9;
         margin: 0 0 24px
@@ -1023,7 +1022,6 @@ a {
     }
 }
 
-/* Expanded Royal Swiss City sections: each image has a distinct narrative role; motion is intentionally visible as sections enter the viewport. */
 .hero-scroll {
     align-items: center;
     bottom: 28px;
@@ -1058,15 +1056,20 @@ a {
     transform: translateY(0) scale(1)
 }
 
-/* Home page vision scene - full width edge-to-edge */
 
 
-/* Developer page vision scene - constrained */
 .vision-scene {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
-    padding: 86px 8vw
+    padding: 86px 8vw;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.vision-scene > div {
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 
@@ -1085,7 +1088,7 @@ a {
 .sustainability-copy h2,
 .enquire-section h2 {
     font-family: var(--serif);
-    font-size: clamp(55px, 7vw, 100px);
+    font-size: clamp(40px, 5vw, 70px);
     font-weight: 300;
     letter-spacing: .01em;
     line-height: .95;
@@ -1132,7 +1135,7 @@ a {
 
 .metric strong {
     font-family: var(--serif);
-    font-size: 42px;
+    font-size: 30px;
     font-weight: 300
 }
 
@@ -1175,7 +1178,7 @@ a {
 }
 
 .developer-copy h2 {
-    font-size: clamp(40px, 4.5vw, 70px)
+    font-size: clamp(32px, 3.5vw, 50px)
 }
 
 .stat-line {
@@ -1189,7 +1192,7 @@ a {
 
 .stat-line span {
     font-family: var(--serif);
-    font-size: 40px
+    font-size: 28px
 }
 
 .stat-line small {
@@ -1225,7 +1228,7 @@ a {
 
 .legacy-copy h2 {
     font-family: var(--serif);
-    font-size: clamp(55px, 7vw, 96px);
+    font-size: clamp(45px, 5vw, 70px);
     font-weight: 300;
     line-height: .9;
     margin: 0 0 34px;
@@ -1267,6 +1270,11 @@ a {
     transform: none;
 }
 
+.legacy-quotes-section.is-visible > div > a {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
 .legacy-card img {
     height: 360px;
     object-fit: cover;
@@ -1285,7 +1293,7 @@ a {
 
 .legacy-card h3 {
     font-family: var(--serif);
-    font-size: 37px;
+    font-size: 26px;
     font-weight: 400;
     line-height: .9;
     margin: 18px 0;
@@ -1364,7 +1372,7 @@ a {
 
 .leader-card h3 {
     font-family: var(--serif);
-    font-size: 37px;
+    font-size: 26px;
     font-weight: 400;
     line-height: .9;
     margin: 18px 0
@@ -1500,7 +1508,7 @@ a {
 
 .feature h3 {
     font-family: var(--serif);
-    font-size: 28px;
+    font-size: 20px;
     font-weight: 400;
     line-height: .95;
     margin: 25px 0 15px
@@ -1620,7 +1628,7 @@ a {
     transform-origin: top;
 }
 
-/* ENQUIRE PAGE STYLES */
+
 .enquire-form-section {
     background: #fff !important;
     padding: 100px 8vw !important;
@@ -1874,7 +1882,7 @@ a {
     }
 
     .developer-copy h2 {
-        font-size: clamp(28px, 6vw, 50px);
+        font-size: clamp(22px, 4.5vw, 38px);
         line-height: 1;
     }
 
@@ -2125,7 +2133,7 @@ a {
     }
 
     .partner-strip h2 {
-        font-size: 45px;
+        font-size: 32px;
         margin: 24px 0
     }
 
@@ -2146,7 +2154,7 @@ a {
     }
 }
 
-/* Editorial rewrite additions: copy is intentionally more generous, with the same quiet luxury rhythm and visible scroll staging. */
+
 .leadership-heading>p:not(.section-kicker) {
     color: #6c665e;
     font-size: 14px;
@@ -2378,7 +2386,7 @@ a {
     }
 }
 
-/* Projects Grid and Modal Styles */
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -2615,7 +2623,7 @@ a {
     }
 }
 
-/* Projects Page Hero Section */
+
 .projects-hero {
     background: linear-gradient(135deg, #151515 0%, #1a1a1a 100%);
     color: #fff;
@@ -2809,7 +2817,7 @@ a {
     }
 }
 
-/* Projects Header Styles */
+
 .projects-header {
     max-width: 800px;
     margin: 0 auto;
@@ -2846,7 +2854,7 @@ a {
     margin: 0;
 }
 
-/* Projects Filters */
+
 .projects-filters {
     display: flex;
     gap: 16px;
@@ -2909,7 +2917,7 @@ a {
     }
 }
 
-/* Unique section animations */
+
 @keyframes slideInFromLeft {
     from {
         opacity: 0;
@@ -2982,10 +2990,8 @@ a {
     }
 }
 
-/* Vision scene animation */
-/* ALL ANIMATIONS DISABLED - GSAP CONTROLLED ONLY */
 
-/* Vision scene animation - DISABLED FOR GSAP */
+
 .vision-scene {
     animation: none !important;
     width: 100vw !important;
@@ -2998,7 +3004,7 @@ a {
     transition: none !important;
 }
 
-/* Legacy section animation - DISABLED FOR GSAP */
+
 .legacy-section {
     animation: none !important;
 }
@@ -3008,7 +3014,7 @@ a {
     transition: none !important;
 }
 
-/* Showcase section animation - DISABLED FOR GSAP */
+
 .showcase-section {
     animation: none !important;
 }
@@ -3018,7 +3024,7 @@ a {
     transition: none !important;
 }
 
-/* Features section animation - DISABLED FOR GSAP */
+
 .features-section {
     animation: none !important;
 }
@@ -3028,7 +3034,7 @@ a {
     transition: none !important;
 }
 
-/* Partner section animation - DISABLED FOR GSAP */
+
 .partner-strip {
     animation: none !important;
 }
@@ -3038,7 +3044,7 @@ a {
     transition: none !important;
 }
 
-/* Enquire section - DISABLED FOR GSAP */
+
 .enquire-section {
     animation: none !important;
 }
@@ -3068,7 +3074,6 @@ a {
 }
 
 
-/* Enquire page footer display fix */
 .enquire-form-section~.walk-footer {
     display: block !important;
     opacity: 1 !important;
@@ -3140,8 +3145,6 @@ a {
 }
 
 
-/* ENQUIRE PAGE COMPLETE STYLES */
-
 .enquire-form-section {
     background: #fff !important;
     padding: 100px 8vw !important;
@@ -3152,7 +3155,7 @@ a {
     width: 100% !important;
 }
 
-/* Top section with different background */
+
 .walk-header {
     background: transparent !important;
 }
@@ -3321,7 +3324,7 @@ a {
     text-align: center !important;
 }
 
-/* Force footer to display on enquire page */
+
 .enquire-form-section~.walk-footer {
     display: block !important;
     opacity: 1 !important;
@@ -3505,7 +3508,7 @@ a {
         line-height: 1.5 !important;
     }
 
-    /* Footer mobile */
+
     .enquire-form-section~.walk-footer {
         padding: 40px 23px 80px !important;
     }
@@ -3547,7 +3550,7 @@ a {
         font-size: 9px !important;
     }
 
-    /* Mobile navbar adjustments */
+
     .walk-header {
         height: auto !important;
         min-height: 80px !important;
@@ -3582,7 +3585,6 @@ a {
 }
 
 
-/* Left and right section backgrounds */
 .enquire-form-left {
     background: #f2f4f7 !important;
     padding: 40px !important;

@@ -84,8 +84,8 @@ export default function Developer() {
       <div className="hero-scroll"><span>SCROLL TO EXPLORE</span><ArrowDown size={14} /></div>
     </section>
 
-    <section id="about" className="vision-scene reveal-section" style={{ display: isMobileView ? "block" : "grid", gridTemplateColumns: isMobileView ? "auto" : "1fr 1fr", gap: isMobileView ? "0" : "6vw", alignItems: isMobileView ? "auto" : "center" }}>
-      <div style={{ order: isMobileView ? "2" : "1" }}>
+    <section id="about" className="vision-scene reveal-section" style={{ display: isMobileView ? "block" : "flex", flexDirection: isMobileView ? "column" : "row", gap: isMobileView ? "0" : "6vw", alignItems: isMobileView ? "auto" : "center", maxWidth: "100%", overflow: "hidden" }}>
+      <div style={{ flex: isMobileView ? "auto" : "1", maxWidth: "100%", minWidth: "0" }}>
         <div className="section-index">01 / 04</div>
         <div className="vision-copy">
           <p className="section-kicker">OUR LEGACY</p>
@@ -100,7 +100,7 @@ export default function Developer() {
           </div>
         </div>
       </div>
-      <div style={{ order: isMobileView ? "1" : "2", marginTop: isMobileView ? "50px" : "0" }}>
+      <div style={{ flex: isMobileView ? "auto" : "1", marginTop: isMobileView ? "50px" : "0", maxWidth: "100%", minWidth: "0", display: "flex", justifyContent: "center", alignItems: "center" }}>
         <ProjectsCarousel isMobileView={isMobileView} />
       </div>
     </section>
