@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowDown } from "lucide-react";
@@ -16,10 +16,18 @@ const preloadImage = (src: string) => {
 
 export function HeroCapsuleAnimation() {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    // Preload the image immediately
     preloadImage("/where-life-unfolds.jpg");
+    
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
   useEffect(() => {
@@ -194,21 +202,53 @@ export function HeroCapsuleAnimation() {
             alignItems: "center",
             justifyContent: "center",
             zIndex: 1,
+            overflow: "hidden",
           }}
         >
-          <iframe
-            width="100%"
-            height="100%"
-            src="https://www.youtube.com/embed/EJ8V7zrPcM0?autoplay=1&mute=1&loop=1&playlist=EJ8V7zrPcM0&controls=0&modestbranding=1&rel=0"
-            title="Royal Swiss City"
+          <div
             style={{
               position: "absolute",
               inset: 0,
-              border: "none",
+              width: "100%",
+              height: "100%",
+              overflow: "hidden",
             }}
-            allow="autoplay; fullscreen"
-            frameBorder="0"
-          />
+          >
+            {isMobile ? (
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  objectPosition: "center",
+                }}
+              >
+                <source src="/hero-mobile-bg.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            ) : (
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/EJ8V7zrPcM0?autoplay=1&mute=1&loop=1&playlist=EJ8V7zrPcM0&controls=0&modestbranding=1&rel=0"
+                title="Royal Swiss City"
+                style={{
+                  position: "absolute",
+                  inset: 0,
+                  border: "none",
+                }}
+                allow="autoplay; fullscreen"
+                frameBorder="0"
+              />
+            )}
+          </div>
           <div
             className="hero-shade"
             style={{
