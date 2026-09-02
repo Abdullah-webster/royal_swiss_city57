@@ -1056,7 +1056,7 @@ a {
     }
 
     .future-section img {
-        display: none;
+        display: block;
     }
 
     .mobile-plot-options {
