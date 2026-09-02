@@ -1055,8 +1055,17 @@ a {
         padding: 74px 23px 120px;
     }
 
+    .future-section > div:first-child {
+        flex-direction: column;
+        gap: 16px;
+    }
+
     .future-section img {
         display: block;
+        border: 2px solid #e0d9d1;
+        border-radius: 8px;
+        height: 250px;
+        width: 100%;
     }
 
     .mobile-plot-options {
@@ -1075,6 +1084,10 @@ a {
     .enquire-section {
         opacity: 1 !important;
         transform: none !important;
+    }
+
+    .partner-strip img {
+        display: block !important;
     }
 }
 
