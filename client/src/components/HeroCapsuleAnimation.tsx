@@ -300,44 +300,6 @@ export function HeroCapsuleAnimation() {
             >
               ROYAL SWISS CITY
             </h1>
-            <p
-              style={{
-                fontSize: "clamp(0.9rem, 1.5vw, 1.1rem)",
-                opacity: 0.82,
-                marginBottom: "30px",
-                display: window.matchMedia("(max-width: 768px)").matches ? "block" : "none",
-              }}
-            >
-              A riverfront community designed for the life ahead.
-              <br />
-              A new address with space to unfold.
-            </p>
-            <a
-              href="#the-city"
-              style={{
-                display: window.matchMedia("(max-width: 768px)").matches ? "inline-block" : "none",
-                padding: "12px 28px",
-                border: "1px solid rgba(255,255,255,0.7)",
-                borderRadius: "999px",
-                color: "white",
-                textDecoration: "none",
-                fontSize: "12px",
-                letterSpacing: "2px",
-                textTransform: "uppercase",
-                background: window.matchMedia("(max-width: 768px)").matches ? "#000" : "transparent",
-                transition: "all 0.3s ease",
-              }}
-              onMouseEnter={(e) => {
-                (e.target as HTMLElement).style.opacity = "0.7";
-                (e.target as HTMLElement).style.transform = "translateY(-2px)";
-              }}
-              onMouseLeave={(e) => {
-                (e.target as HTMLElement).style.opacity = "1";
-                (e.target as HTMLElement).style.transform = "translateY(0)";
-              }}
-            >
-              DISCOVER THE CITY
-            </a>
           </div>
           <div
             className="hero-scroll"
@@ -431,33 +393,6 @@ export function HeroCapsuleAnimation() {
                 carefully considered streets, and the everyday ease of a
                 complete community.
               </p>
-              <a
-                href="#"
-                style={{
-                  display: "inline-block",
-                  marginTop: "12px",
-                  padding: "8px 16px",
-                  border: "2px solid #111",
-                  borderRadius: "999px",
-                  color: "#111",
-                  textDecoration: "none",
-                  fontSize: "clamp(0.7rem, 0.8vw, 0.85rem)",
-                  letterSpacing: "1px",
-                  textTransform: "uppercase",
-                  cursor: "pointer",
-                  transition: "all 0.3s ease",
-                }}
-                onMouseEnter={(e) => {
-                  (e.target as HTMLElement).style.opacity = "0.7";
-                  (e.target as HTMLElement).style.transform = "translateY(-2px)";
-                }}
-                onMouseLeave={(e) => {
-                  (e.target as HTMLElement).style.opacity = "1";
-                  (e.target as HTMLElement).style.transform = "translateY(0)";
-                }}
-              >
-                Discover More
-              </a>
             </div>
           </div>
         </div>
@@ -533,35 +468,6 @@ export function HeroCapsuleAnimation() {
                 carefully considered streets, and the everyday ease of a
                 complete community.
               </p>
-              <a
-                className="discover"
-                href="#"
-                style={{
-                  display: "inline-block",
-                  marginTop: "22px",
-                  padding: "12px 22px",
-                  border: "2px solid #111",
-                  borderRadius: "999px",
-                  color: "#111",
-                  textDecoration: "none",
-                  fontSize: "10px",
-                  letterSpacing: "2px",
-                  textTransform: "uppercase",
-                  background: "transparent",
-                  cursor: "pointer",
-                  transition: "all 0.3s ease",
-                }}
-                onMouseEnter={(e) => {
-                  (e.target as HTMLElement).style.opacity = "0.7";
-                  (e.target as HTMLElement).style.transform = "translateY(-2px)";
-                }}
-                onMouseLeave={(e) => {
-                  (e.target as HTMLElement).style.opacity = "1";
-                  (e.target as HTMLElement).style.transform = "translateY(0)";
-                }}
-              >
-                Discover More
-              </a>
             </div>
           </div>
         </div>

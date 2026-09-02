@@ -1012,9 +1012,71 @@ a {
     .partner-strip .outline-cta {
         margin-top: 18px
     }
+
+    .future-section {
+        background: #fff;
+        padding: 9vw 8vw;
+        position: relative;
+        z-index: 3;
+    }
 }
 
 
+
+/* Plot Options - Mobile: 4 options, Desktop: 8 options */
+.mobile-plot-options {
+    display: grid !important;
+}
+
+.desktop-plot-options {
+    display: none !important;
+}
+
+@media (min-width: 769px) {
+    .mobile-plot-options {
+        display: none !important;
+    }
+
+    .desktop-plot-options {
+        display: grid !important;
+    }
+
+    .future-section {
+        padding: 9vw 8vw;
+    }
+
+    .future-section img {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .future-section {
+        padding: 74px 23px 120px;
+    }
+
+    .future-section img {
+        display: none;
+    }
+
+    .mobile-plot-options {
+        display: grid !important;
+    }
+
+    .desktop-plot-options {
+        display: none !important;
+    }
+
+    .legacy-quote {
+        font-size: 9px !important;
+        line-height: 1.6;
+    }
+
+    .enquire-section {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
 
 @media(prefers-reduced-motion:reduce) {
     html {
@@ -1267,8 +1329,8 @@ a {
 }
 
 .legacy-quotes-section {
-    background: #fff;
-    padding: 9vw 8vw 2vw 8vw;
+    background: #d6d0c6;
+    padding: 1vw 8vw 2vw 8vw;
     position: relative;
     z-index: 3;
 }
@@ -1277,7 +1339,7 @@ a {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 26px;
-    margin-top: 70px;
+    margin-top: 20px;
 }
 
 .legacy-card {
@@ -1287,6 +1349,7 @@ a {
     opacity: 0;
     transform: translateY(36px);
     transition: opacity .8s ease, transform .9s var(--ease);
+    align-items: stretch;
 }
 
 .legacy-quotes-section.is-visible .legacy-card {
@@ -1300,7 +1363,7 @@ a {
 }
 
 .legacy-card img {
-    height: 360px;
+    height: 100%;
     object-fit: cover;
     width: 100%;
 }
@@ -2190,7 +2253,7 @@ a {
 .showcase-section {
     background: #d6d0c6;
     min-height: 860px;
-    padding: 9vw 8vw 10vw 8vw;
+    padding: 9vw 8vw 0vw 8vw;
     position: relative;
     z-index: 3;
     overflow-y: auto;
@@ -2349,7 +2412,7 @@ a {
 
     .showcase-section {
         min-height: 760px;
-        padding: 74px 23px 80px 23px
+        padding: 74px 23px 0px 23px
     }
 
     .showcase-heading {
