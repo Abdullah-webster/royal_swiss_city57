@@ -350,7 +350,7 @@ export const animateEnquireSection = (element: Element) => {
       trigger: element,
       start: 'top 80%',
       end: 'top 20%',
-      scrub: 1.2,
+      scrub: 0.2,
     }
   });
 
@@ -364,7 +364,7 @@ export const animateEnquireSection = (element: Element) => {
     {
       opacity: 1,
       transform: 'translateY(0)',
-      duration: 2.3,
+      duration: 0.4,
       ease: 'power3.inOut',
     },
     0
@@ -380,9 +380,9 @@ export const animateEnquireSection = (element: Element) => {
     {
       y: 0,
       opacity: 1,
-      duration: 1.5,
+      duration: 0.3,
     },
-    0.3
+    0.1
   );
 
   // Paragraph flows in
@@ -395,9 +395,9 @@ export const animateEnquireSection = (element: Element) => {
     {
       y: 0,
       opacity: 1,
-      duration: 1.3,
+      duration: 0.25,
     },
-    0.5
+    0.15
   );
 
   // CTA links with stagger
@@ -410,10 +410,10 @@ export const animateEnquireSection = (element: Element) => {
     {
       opacity: 1,
       y: 0,
-      duration: 1.2,
-      stagger: 0.1,
+      duration: 0.2,
+      stagger: 0.05,
     },
-    0.6
+    0.2
   );
 };
 

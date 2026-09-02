@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 160" width="100%" height="100%">
+  <defs>
+    <linearGradient id="vanguardSilver" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E0E6ED" />
+      <stop offset="50%" stop-color="#8A99AD" />
+      <stop offset="100%" stop-color="#4A5568" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="#121212" rx="12"/>
+  <!-- Shield & V Icon -->
+  <g transform="translate(165, 12)">
+    <path d="M35 0 L70 15 V45 C70 65 35 75 35 75 C35 75 0 65 0 45 V15 Z" fill="none" stroke="url(#vanguardSilver)" stroke-width="3"/>
+    <path d="M20 25 L35 55 L50 25" fill="none" stroke="url(#vanguardSilver)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <!-- Typography -->
+  <text x="200" y="115" font-family="'Cinzel', serif" font-size="22" font-weight="700" fill="url(#vanguardSilver)" letter-spacing="5" text-anchor="middle">VANGUARD</text>
+  <text x="200" y="135" font-family="'Montserrat', sans-serif" font-size="9" font-weight="400" fill="#A1A1A1" letter-spacing="3" text-anchor="middle">CAPITAL REAL ESTATE</text>
+</svg>

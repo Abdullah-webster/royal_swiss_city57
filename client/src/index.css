@@ -632,8 +632,8 @@ a {
 .footer-accordions,
 .footer-trust,
 .footer-legal {
-    opacity: 0;
-    transform: translateY(20px);
+    opacity: 1;
+    transform: none;
     transition: opacity .7s ease, transform .8s cubic-bezier(.23, 1, .32, 1)
 }
 
@@ -683,7 +683,7 @@ a {
 
 .footer-socials a {
     color: #171717;
-    transition: opacity .2s ease, transform .2s ease;
+    transition: opacity .3s ease, transform .3s ease, color .3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -691,7 +691,8 @@ a {
 
 .footer-socials a:hover {
     opacity: .6;
-    transform: translateY(-2px)
+    transform: translateY(-4px) scale(1.15);
+    color: #c4b08a;
 }
 
 .footer-contact b {
@@ -706,10 +707,6 @@ a {
     letter-spacing: .08em
 }
 
-.footer-accordions {
-    text-align: left
-}
-
 .footer-accordions>div {
     border-bottom: 1px solid #c7c7c7
 }
@@ -722,17 +719,43 @@ a {
     letter-spacing: .16em;
     padding: 15px 0;
     text-transform: uppercase;
-    width: 100%
+    width: 100%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.footer-accordions button:hover {
+    color: #c4b08a;
+}
+
+.footer-accordions button svg {
+    transition: transform 0.3s ease;
+}
+
+.footer-accordions .open button svg {
+    transform: rotate(180deg);
 }
 
 .footer-accordions p {
     color: #8b8b8b;
     font-size: 11px;
-    margin: 0 0 14px
+    margin: 0 0 14px;
+    animation: slideDown 0.3s ease;
 }
 
-.footer-accordions .open svg {
-    transform: rotate(180deg)
+.footer-accordions a {
+    animation: slideDown 0.3s ease 0.15s backwards;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .footer-trust {
@@ -1050,14 +1073,66 @@ a {
     }
 }
 
+/* Dealers Slider Styling */
+.dealers-carousel {
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: #c4b08a #f1f1f1;
+    width: 100%;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.dealers-carousel::-webkit-scrollbar {
+    height: 6px;
+}
+
+.dealers-carousel::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dealers-carousel::-webkit-scrollbar-thumb {
+    background: #c4b08a;
+    border-radius: 3px;
+}
+
+.dealers-slide-desktop {
+    display: grid !important;
+    animation: slideInDealer 0.4s ease-out;
+}
+
+.dealers-slide-mobile {
+    display: none !important;
+    animation: slideInDealer 0.4s ease-out;
+}
+
+@keyframes slideInDealer {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .dealers-slide-desktop {
+        display: none !important;
+    }
+
+    .dealers-slide-mobile {
+        display: grid !important;
+    }
+}
+
 @media (max-width: 768px) {
     .future-section {
         padding: 74px 23px 120px;
     }
 
     .future-section > div:first-child {
-        display: flex;
-        flex-direction: row;
+        flex-direction: column;
         gap: 16px;
     }
 
@@ -1065,9 +1140,8 @@ a {
         display: block;
         border: 2px solid #e0d9d1;
         border-radius: 8px;
-        height: 200px;
-        width: 100px;
-        flex: 0 0 100px;
+        height: 250px;
+        width: 100%;
     }
 
     .mobile-plot-options {
@@ -1093,15 +1167,26 @@ a {
         grid-template-columns: 35% 1fr;
         gap: 16px;
         padding: 74px 23px 84px;
-        align-items: center;
     }
 
     .partner-strip img {
         display: block !important;
         border: 2px solid #e0d9d1;
         border-radius: 8px;
-        height: 200px;
+        height: auto;
         object-fit: cover;
+    }
+
+    .partner-strip > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .partner-strip .outline-cta {
+        margin-top: 12px;
+        align-self: flex-start;
     }
 }
 
@@ -1375,8 +1460,12 @@ a {
     grid-template-columns: 42% 1fr;
     opacity: 0;
     transform: translateY(36px);
-    transition: opacity .8s ease, transform .9s var(--ease);
+    transition: opacity 0.6s ease, transform 0.6s ease;
     align-items: stretch;
+}
+
+.legacy-card:nth-child(2) {
+    transition-delay: 0.15s;
 }
 
 .legacy-quotes-section.is-visible .legacy-card {
@@ -1387,6 +1476,12 @@ a {
 .legacy-quotes-section.is-visible > div > a {
     opacity: 1 !important;
     transform: translateY(0) !important;
+    transition: all 0.3s ease;
+}
+
+.legacy-quotes-section.is-visible > div > a:hover {
+    opacity: 0.7 !important;
+    transform: translateY(-2px) !important;
 }
 
 .legacy-card img {
@@ -1693,10 +1788,16 @@ a {
     position: relative;
     text-align: center;
     z-index: 3;
-    opacity: 1;
-    transform: none;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.15s ease, transform 0.15s ease;
     perspective: 1200px;
     width: 100%;
+}
+
+.enquire-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .enquire-section h2 {
@@ -2224,7 +2325,14 @@ a {
 
     .enquire-section {
         min-height: 540px;
-        padding: 90px 23px 100px
+        padding: 90px 23px 100px;
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    .enquire-section.is-visible {
+        opacity: 1;
+        transform: translateY(0);
     }
 
     .enquire-section>div {
@@ -2238,7 +2346,7 @@ a {
 
     .partner-strip {
         display: block;
-        padding: 74px 23px 84px;
+        padding: 74px 23px 40px;
         background: #f1f1f1
     }
 
@@ -2278,7 +2386,7 @@ a {
 }
 
 .showcase-section {
-    background: #d6d0c6;
+    background: linear-gradient(135deg, #fae3bb 0%, #c9bfb3 50%, #d6d0c6 100%);
     min-height: 860px;
     padding: 9vw 8vw 0vw 8vw;
     position: relative;
@@ -2708,6 +2816,103 @@ a {
     to {
         transform: translateY(0);
         opacity: 1
+    }
+}
+
+/* Dealer Modal Styling */
+.dealer-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    animation: fadeIn .3s ease;
+    padding: 20px
+}
+
+.dealer-modal {
+    background: #fff;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    animation: slideUp .3s ease
+}
+
+.dealer-modal .modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 101;
+    background: rgba(255, 255, 255, .95);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background .2s ease
+}
+
+.dealer-modal .modal-close:hover {
+    background: #fff
+}
+
+.dealer-modal .modal-content {
+    padding: 40px 30px
+}
+
+.dealer-modal .modal-content h2 {
+    font-family: var(--serif);
+    font-size: 28px;
+    font-weight: 400;
+    margin: 0 0 12px;
+    line-height: 1.2;
+    color: #111
+}
+
+.modal-type {
+    font-size: 11px;
+    letter-spacing: .15em;
+    color: #c4b08a;
+    margin: 0 0 12px;
+    text-transform: uppercase;
+    font-weight: 600
+}
+
+.modal-location {
+    font-size: 12px;
+    letter-spacing: .1em;
+    color: #888;
+    margin: 0 0 20px;
+    text-transform: uppercase
+}
+
+.modal-description {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #555;
+    margin: 0
+}
+
+@media(max-width:760px) {
+    .dealer-modal {
+        max-width: calc(100% - 40px);
+        max-height: 80vh;
+        border-radius: 12px
+    }
+
+    .dealer-modal .modal-content {
+        padding: 30px 20px
+    }
+
+    .dealer-modal .modal-content h2 {
+        font-size: 22px
     }
 }
 

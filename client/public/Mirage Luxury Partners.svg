@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 160" width="100%" height="100%">
+  <defs>
+    <linearGradient id="mirageGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE082" />
+      <stop offset="50%" stop-color="#C5A059" />
+      <stop offset="100%" stop-color="#7B5E24" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="#121212" rx="12"/>
+  <!-- Elegant Monogram Icon -->
+  <g transform="translate(165, 10)">
+    <path d="M10 60 C 10 20, 25 10, 35 10 C 45 10, 48 35, 52 35 C 56 35, 60 10, 68 10 C 73 10, 78 25, 78 60" fill="none" stroke="url(#mirageGold)" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="44" cy="50" r="4" fill="url(#mirageGold)"/>
+  </g>
+  <!-- Typography -->
+  <text x="200" y="115" font-family="'Bodoni MT', 'Didot', serif" font-style="italic" font-size="24" font-weight="600" fill="url(#mirageGold)" letter-spacing="4" text-anchor="middle">Mirage</text>
+  <text x="200" y="135" font-family="'Montserrat', sans-serif" font-size="9" font-weight="300" fill="#A1A1A1" letter-spacing="4" text-anchor="middle">LUXURY PARTNERS</text>
+</svg>
