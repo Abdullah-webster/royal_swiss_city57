@@ -998,7 +998,7 @@ a {
         display: grid;
         gap: 8vw;
         grid-template-columns: 38% 1fr;
-        padding: 90px 8vw;
+        padding: 60px 8vw 50px 8vw;
         position: relative;
         z-index: 3;
         opacity: 1;
@@ -1038,7 +1038,7 @@ a {
 
     .future-section {
         background: #fff;
-        padding: 9vw 8vw;
+        padding: 4vw 8vw 3vw 8vw;
         position: relative;
         z-index: 3;
     }
@@ -1065,7 +1065,7 @@ a {
     }
 
     .future-section {
-        padding: 9vw 8vw;
+        padding: 4vw 8vw 3vw 8vw;
     }
 
     .future-section img {
@@ -1128,7 +1128,7 @@ a {
 
 @media (max-width: 768px) {
     .future-section {
-        padding: 74px 23px 120px;
+        padding: 60px 23px 60px;
     }
 
     .future-section > div:first-child {
@@ -1418,7 +1418,7 @@ a {
 
 .legacy-quotes-section {
     background: #d6d0c6;
-    padding: 1vw 8vw 2vw 8vw;
+    padding: 1.5vw 8vw 2vw 8vw;
     position: relative;
     z-index: 3;
 }
@@ -2253,7 +2253,7 @@ a {
 
     .partner-strip {
         display: block;
-        padding: 74px 23px 40px;
+        padding: 50px 23px 35px;
         background: #f1f1f1
     }
 
@@ -2295,7 +2295,7 @@ a {
 .showcase-section {
     background: linear-gradient(135deg, #fae3bb 0%, #c9bfb3 50%, #d6d0c6 100%);
     min-height: 860px;
-    padding: 9vw 8vw 0vw 8vw;
+    padding: 7vw 8vw 2vw 8vw;
     position: relative;
     z-index: 3;
     overflow-y: auto;
@@ -2454,7 +2454,7 @@ a {
 
     .showcase-section {
         min-height: 760px;
-        padding: 74px 23px 0px 23px
+        padding: 50px 23px 0px 23px
     }
 
     .showcase-heading {
