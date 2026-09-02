@@ -1157,11 +1157,6 @@ a {
         line-height: 1.6;
     }
 
-    .enquire-section {
-        opacity: 1 !important;
-        transform: none !important;
-    }
-
     .partner-strip {
         display: grid;
         grid-template-columns: 35% 1fr;
@@ -1266,8 +1261,7 @@ a {
 .leadership-heading h2,
 .masterplan-copy h2,
 .features-section>h2,
-.sustainability-copy h2,
-.enquire-section h2 {
+.sustainability-copy h2 {
     font-family: var(--serif);
     font-size: clamp(40px, 5vw, 70px);
     font-weight: 300;
@@ -1281,8 +1275,7 @@ a {
 .vision-copy p:not(.section-kicker),
 .developer-copy>p:not(.section-kicker),
 .masterplan-copy>p:not(.section-kicker),
-.sustainability-copy>p:not(.section-kicker),
-.enquire-section>p:not(.section-kicker) {
+.sustainability-copy>p:not(.section-kicker) {
     color: #bcb5ac;
     font-size: 14px;
     line-height: 1.8;
@@ -1761,49 +1754,6 @@ a {
     font-size: 8px;
     letter-spacing: .15em;
     padding: 9px 13px
-}
-
-.enquire-section {
-    background: #111;
-    color: #fff;
-    min-height: 560px;
-    padding: 11vw 8vw;
-    position: relative;
-    text-align: center;
-    z-index: 3;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.15s ease, transform 0.15s ease;
-    perspective: 1200px;
-    width: 100%;
-}
-
-.enquire-section.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.enquire-section h2 {
-    font-size: clamp(65px, 9vw, 130px)
-}
-
-.enquire-section>p:not(.section-kicker) {
-    color: #bcb5ac;
-    margin: 30px auto;
-    max-width: 420px
-}
-
-.enquire-section>div {
-    display: flex;
-    gap: 18px;
-    justify-content: center
-}
-
-.enquire-section>div a {
-    border-bottom: 1px solid rgba(255, 255, 255, .4);
-    font-size: 10px;
-    letter-spacing: .12em;
-    padding-bottom: 7px
 }
 
 @keyframes footerReveal {
@@ -2299,27 +2249,6 @@ a {
 
     .sustainability-copy {
         margin-top: 50px
-    }
-
-    .enquire-section {
-        min-height: 540px;
-        padding: 90px 23px 100px;
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    .enquire-section.is-visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    .enquire-section>div {
-        align-items: center;
-        flex-direction: column
-    }
-
-    .enquire-section>div a {
-        font-size: 9px
     }
 
     .partner-strip {
@@ -3328,15 +3257,6 @@ a {
     transition: none !important;
 }
 
-
-.enquire-section {
-    animation: none !important;
-}
-
-.enquire-section * {
-    animation: none !important;
-    transition: none !important;
-}
 
 /* Enquire page mobile responsiveness */
 @media(max-width:760px) {
