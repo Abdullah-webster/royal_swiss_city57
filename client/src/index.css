@@ -17,7 +17,13 @@
 }
 
 html {
-    scroll-behavior: smooth
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar {
+    display: none;
 }
 
 body {
@@ -76,11 +82,39 @@ a {
     z-index: 20
 }
 
+/* Hide navbar only on home page desktop during hero */
+@media(min-width:761px) {
+    .home-page .walk-header {
+        opacity: 0;
+        pointer-events: none;
+    }
+    
+    .home-page .walk-header.is-scrolled {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
 .walk-header.is-scrolled {
     background: rgba(255, 255, 255, 0.735);
     backdrop-filter: blur(25px) saturate(.68);
     border-color: rgba(0, 0, 0, 0.15);
     color: #171717
+}
+
+.walk-header>button,
+.walk-header .brand-logo,
+.walk-header nav,
+.walk-header a {
+    opacity: calc(var(--hero-progress));
+    transition: opacity 0.4s ease
+}
+
+.walk-header.is-scrolled>button,
+.walk-header.is-scrolled .brand-logo,
+.walk-header.is-scrolled nav,
+.walk-header.is-scrolled a {
+    opacity: 1
 }
 
 .walk-header>button {
@@ -1045,32 +1079,22 @@ a {
 .vision-scene {
     background: #151515;
     color: #fff;
-    min-height: 760px;
+    padding: 3vw 8vw 0vw 8vw;
+    position: relative;
     z-index: 3;
-    opacity: 0;
-    transition: opacity 0.8s ease, transform 0.9s cubic-bezier(.23, 1, .32, 1)
+    margin-top: -8vw;
 }
 
-.vision-scene.is-visible {
+.vision-scene .metric {
     opacity: 1;
-    transform: translateY(0) scale(1)
+    transform: translateY(0);
 }
 
 
 
-.vision-scene {
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-    padding: 86px 8vw;
-    box-sizing: border-box;
-    overflow-x: hidden;
-}
 
-.vision-scene > div {
-    max-width: 100%;
-    overflow-x: hidden;
-}
+
+
 
 
 
@@ -1244,7 +1268,7 @@ a {
 
 .legacy-quotes-section {
     background: #fff;
-    padding: 9vw 8vw;
+    padding: 9vw 8vw 2vw 8vw;
     position: relative;
     z-index: 3;
 }
@@ -3599,4 +3623,9 @@ a {
     display: flex !important;
     flex-direction: column !important;
     border: 1px solid #e0e0e0 !important;
+}
+
+/* WHERE LIFE HAPPENS - Very light gradient badge */
+.art-content-fullscreen-text {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0) 0%, rgba(196, 176, 138, 0.15) 100%) !important;
 }
