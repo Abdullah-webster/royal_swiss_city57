@@ -123,8 +123,8 @@ export function HeroCapsuleAnimation() {
       // MOBILE ANIMATION (ULTRA SMOOTH)
       tl.to(".art-capsule-mobile", {
         bottom: "0vh",
-        duration: 2,
-        ease: "none",
+        duration: 1.4,
+        ease: "power1.inOut",
       });
 
       tl.to(".art-capsule-mobile", {
@@ -132,8 +132,8 @@ export function HeroCapsuleAnimation() {
         height: "75vh",
         bottom: "5vh",
         borderRadius: "200px 200px 0px 0px",
-        duration: 1.8,
-        ease: "none",
+        duration: 1.1,
+        ease: "power1.inOut",
       });
 
       tl.to(".art-capsule-mobile", {
@@ -141,8 +141,8 @@ export function HeroCapsuleAnimation() {
         height: "85vh",
         bottom: "8vh",
         borderRadius: "200px 200px 0px 0px",
-        duration: 1.6,
-        ease: "none",
+        duration: 1.0,
+        ease: "power1.inOut",
       });
 
       tl.to(".art-capsule-mobile", {
@@ -150,8 +150,8 @@ export function HeroCapsuleAnimation() {
         height: "100vh",
         bottom: "0vh",
         borderRadius: "0px",
-        duration: 1.9,
-        ease: "none",
+        duration: 1.1,
+        ease: "power1.inOut",
       });
     }
 
@@ -214,47 +214,31 @@ export function HeroCapsuleAnimation() {
               overflow: "hidden",
             }}
           >
-            {isMobile ? (
-              <video
-                autoPlay
-                muted
-                loop
-                playsInline
-                style={{
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  objectPosition: "center",
-                }}
-              >
-                <source src="/hero-mobile-bg.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            ) : (
-              <iframe
-                width="100%"
-                height="100%"
-                src="https://www.youtube.com/embed/EJ8V7zrPcM0?autoplay=1&mute=1&loop=1&playlist=EJ8V7zrPcM0&controls=0&modestbranding=1&rel=0"
-                title="Royal Swiss City"
-                style={{
-                  position: "absolute",
-                  inset: 0,
-                  border: "none",
-                }}
-                allow="autoplay; fullscreen"
-                frameBorder="0"
-              />
-            )}
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "center",
+              }}
+            >
+              <source src="/hero-bg.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
           <div
             className="hero-shade"
             style={{
               position: "absolute",
               inset: 0,
-              background: "linear-gradient(rgba(0,0,0,.28), rgba(0,0,0,.65))",
+              background: "linear-gradient(rgba(0,0,0,.15), rgba(0,0,0,.35))",
             }}
           />
           <div
@@ -265,7 +249,7 @@ export function HeroCapsuleAnimation() {
               color: "white",
               textAlign: "center",
               padding: "30px",
-              top: "50%",
+              top: window.matchMedia("(max-width: 768px)").matches ? "70%" : "75%",
               left: "50%",
               transform: "translate(-50%, -50%)",
               width: "100%",
@@ -275,7 +259,7 @@ export function HeroCapsuleAnimation() {
             <p
               className="hero-kicker"
               style={{
-                fontSize: "clamp(9px, 2vw, 11px)",
+                fontSize: "clamp(8px, 1.5vw, 10px)",
                 letterSpacing: "3px",
                 textTransform: "uppercase",
                 marginBottom: "20px",
@@ -289,7 +273,7 @@ export function HeroCapsuleAnimation() {
             </p>
             <h1
               style={{
-                fontSize: window.matchMedia("(max-width: 768px)").matches ? "clamp(4rem, 12vw, 10rem)" : "clamp(3rem, 8vw, 8rem)",
+                fontSize: window.matchMedia("(max-width: 768px)").matches ? "clamp(3rem, 10vw, 8rem)" : "clamp(2.5rem, 6vw, 6rem)",
                 fontWeight: 400,
                 letterSpacing: "-0.06em",
                 lineHeight: 1.1,
