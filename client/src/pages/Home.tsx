@@ -4,7 +4,7 @@ import { HeroCapsuleAnimation } from "@/components/HeroCapsuleAnimation";
 import { ShowcaseCarousel } from "@/components/ShowcaseCarousel";
 import { animateLegacySection, animateFooter, animateShowcaseSection } from "@/utils/sectionAnimations";
 
-const img = { logo: "https://royal-swiss-city-30.vercel.app/logo.png", hero: "/city-aerial.jpg", city: "/city-aerial.jpg", developer: "/hrl-highrise.jpg", green: "/green-energy.jpg", chairman: "/chairman.png", ceo: "/ceo.png", partnership: "/infrastructure.jpg", residences: "/hrl-roads.jpg", aerial: "/city-aerial.jpg" };
+const img = { logo: "https://royal-swiss-city-30.vercel.app/logo.png", hero: "/city-aerial.jpg", city: "/city-aerial.jpg", developer: "/hrl-highrise.jpg", green: "/green-energy.jpg", chairman: "/chairman.png", ceo: "/ceo.png", partnership: "/hand_shaking.jpg", residences: "/hrl-roads.jpg", aerial: "/city-aerial.jpg" };
 const nav = ["HOME", "THE CITY", "DEVELOPER", "LOCATION", "FAQ", "PARTNER", "DEALER", "ENQUIRE"];
 const navMobile = ["HOME", "THE CITY", "DEVELOPER", "PROJECTS", "LOCATION", "FAQ", "PARTNER", "DEALER", "ENQUIRE"];
 const footerLinks = ["Residential Plots", "Commercial Plots", "The City", "Developer", "Location", "FAQ", "Partner", "Enquire"];
