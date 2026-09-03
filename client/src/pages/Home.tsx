@@ -75,9 +75,119 @@ export default function Home() {
     <header className={`walk-header ${scrolled ? "is-scrolled" : ""}`}><button className="mobile-menu-trigger" aria-label="Menu" onClick={() => setMenuOpen(true)}><Menu size={22} strokeWidth={1.4} /></button><nav className="desktop-links desktop-links--left">{nav.slice(0, 3).map(item => <Anchor key={item} item={item} />)}</nav><a className="centered-brand" href="#home"><Logo /></a><nav className="desktop-links desktop-links--right">{nav.slice(3).map(item => <Anchor key={item} item={item} />)}</nav></header>
     <HeroCapsuleAnimation />
 
-    <section id="location" className="showcase-section reveal-section"><div className="showcase-heading"><p className="section-kicker">THE LEGACY</p><h2>60+ Years of LEGACY<br /><em>Crafted by experience.</em></h2><p>Behind Royal Swiss City is a legacy built over six decades. Habib Rafiq and RKS bring the discipline of engineering, infrastructure, and delivery to a new kind of residential address. That experience is felt in the decisions that matter: the scale of the roads, the care in the utilities, the clarity of the masterplan, and the confidence that comes from building for the long term.</p></div><ShowcaseCarousel cards={communityCards} /><div style={{ textAlign: "center" }}><a href="/projects" style={{ background: "#c4b08a", color: "#111", border: "none", padding: "12px 28px", borderRadius: "999px", fontSize: "10px", letterSpacing: "2px", textTransform: "uppercase", textDecoration: "none", display: "inline-block", fontWeight: 500, transition: "all 0.3s ease", marginTop: "48px", marginBottom: "0px" }} onMouseEnter={(e) => { (e.target as HTMLElement).style.opacity = "0.7"; (e.target as HTMLElement).style.transform = "translateY(-2px)"; }} onMouseLeave={(e) => { (e.target as HTMLElement).style.opacity = "1"; (e.target as HTMLElement).style.transform = "translateY(0)"; }}>VIEW ALL PROJECTS</a></div></section>
+    <section id="location" className="showcase-section reveal-section"><div className="showcase-heading"><p className="section-kicker">THE LEGACY</p><h2><span className="showcase-number">60+</span> <br /> Years of Legacy<br /><em>Crafted by experience.</em></h2><p>Behind Royal Swiss City is a legacy built over six decades. Habib Rafiq and RKS bring the discipline of engineering, infrastructure, and delivery to a new kind of residential address. That experience is felt in the decisions that matter: the scale of the roads, the care in the utilities, the clarity of the masterplan, and the confidence that comes from building for the long term.</p></div><ShowcaseCarousel cards={communityCards} /><div style={{ textAlign: "center" }}><a href="/projects" style={{ background: "#c4b08a", color: "#111", border: "none", padding: "12px 28px", borderRadius: "999px", fontSize: "10px", letterSpacing: "2px", textTransform: "uppercase", textDecoration: "none", display: "inline-block", fontWeight: 500, transition: "all 0.3s ease", marginTop: "48px", marginBottom: "0px" }} onMouseEnter={(e) => { (e.target as HTMLElement).style.opacity = "0.7"; (e.target as HTMLElement).style.transform = "translateY(-2px)"; }} onMouseLeave={(e) => { (e.target as HTMLElement).style.opacity = "1"; (e.target as HTMLElement).style.transform = "translateY(0)"; }}>VIEW ALL PROJECTS</a></div></section>
 
-    <section className="legacy-quotes-section reveal-section"><div className="legacy-quotes"><article className="legacy-card reveal-item"><img src={img.chairman} alt="Shahid Rafiq" /><div><small>CHAIRMAN</small><h3>The Legacy That Shaped Our Journey</h3><p style={{ fontSize: "13px", color: "#999", marginBottom: "12px" }}>Shahid Rafiq</p><p className="legacy-quote">"For over six decades, Habib Rafiq (Pvt) Ltd has transformed vision into reality through innovation, quality, and dedication. Renowned for delivering excellence across industrial, infrastructure, power, oil & gas, aviation, and high-rise projects, we have consistently exceeded client expectations. Building on this legacy, we now bring the same expertise to modern housing society — designed with world-class infrastructure, sustainable planning, and premium amenities, reflecting our commitment to exceptional living spaces and lasting value for generations to come."</p></div></article><article className="legacy-card reveal-item"><img src={img.ceo} alt="Sohaib Hassan" /><div><small>CHIEF EXECUTIVE</small><h3>The Vision That Shapes Our Future</h3><p style={{ fontSize: "13px", color: "#999", marginBottom: "12px" }}>Sohaib Hassan</p><p className="legacy-quote">"It is a privilege to carry forward the legacy of Habib Rafiq Engineering (Pvt) Ltd. For over six decades, we set benchmarks in engineering excellence before expanding into real estate — making quality developments our trademark. Today, we develop well-planned, sustainable communities combining modern infrastructure with affordable living through Royal Swiss City. We remain committed to creating developments that enhance lifestyles and deliver lasting value for homeowners, investors, and future generations."</p></div></article></div><div style={{ textAlign: "center" }}><a href="/developer" style={{ background: "#c4b08a", color: "#111", border: "none", padding: "12px 28px", borderRadius: "999px", fontSize: "10px", letterSpacing: "2px", textTransform: "uppercase", textDecoration: "none", display: "inline-block", fontWeight: 500, transition: "all 0.3s ease", marginTop: "48px", marginBottom: "48px" }} onMouseEnter={(e) => { (e.target as HTMLElement).style.opacity = "0.7"; (e.target as HTMLElement).style.transform = "translateY(-2px)"; }} onMouseLeave={(e) => { (e.target as HTMLElement).style.opacity = "1"; (e.target as HTMLElement).style.transform = "translateY(0)"; }}>LEARN MORE ABOUT HRL</a></div></section>
+    <section className="legacy-quotes-section reveal-section">
+      {/* Section Header */}
+      <div className="legacy-section-header">
+        <div className="header-title">
+          <img src="/crowns.png" alt="Crown" className="crown-icon" style={{ width: "320px", height: "150px" }} />
+          <h2>LEADERSHIP & LEGACY</h2>
+        </div>
+        <p className="header-subtitle">TWO GENERATIONS. ONE ENDURING VISION.</p>
+        <div className="header-divider">
+          <span></span>
+          <svg width="8" height="8" viewBox="0 0 8 8" fill="currentColor">
+            <circle cx="4" cy="4" r="4"/>
+          </svg>
+          <span></span>
+        </div>
+      </div>
+
+      {/* Leadership Cards */}
+      <div className="legacy-quotes">
+        {/* Chairman Card */}
+        <article className="legacy-card legacy-card--chairman reveal-item">
+          <div className="legacy-card__image-wrapper">
+            <img src={img.chairman} alt="Shahid Rafiq" />
+            <div className="legacy-card__image-label">
+              <span>YEARS OF TRUST, QUALITY & EXCELLENCE</span>
+            </div>
+          </div>
+          <div className="legacy-card__divider"></div>
+          <div className="legacy-card__content">
+            <small>CHAIRMAN</small>
+            <h3>THE LEGACY THAT SHAPED OUR JOURNEY</h3>
+            <div className="legacy-card__decoration">
+              <span></span>
+              <svg width="6" height="6" viewBox="0 0 6 6" fill="currentColor">
+                <circle cx="3" cy="3" r="3"/>
+              </svg>
+              <span></span>
+            </div>
+            <div className="legacy-card__quote-section">
+              <div className="legacy-card__quote-mark">"</div>
+              <p className="legacy-quote">Building on this legacy, we now bring the same expertise to modern housing.</p>
+            </div>
+            <p className="legacy-card__body">For over six decades, Habib Rafiq (Pvt) Ltd has transformed vision into reality through innovation, quality, and dedication. Renowned for delivering excellence across industrial, infrastructure, power, oil & gas, aviation, and high-rise projects, we have consistently exceeded client expectations. Building on this legacy, we now bring the same expertise to modern housing society — designed with world-class infrastructure, sustainable planning, and premium amenities, reflecting our commitment to exceptional living spaces and lasting value for generations to come.</p>
+            <div className="legacy-card__signature">
+              <p><strong>Shahid Rafiq</strong></p>
+              <p>CHAIRMAN, HABIB RAFIQ (PVT.) LTD.</p>
+            </div>
+            <div className="legacy-card__watermark">HRL</div>
+          </div>
+        </article>
+
+        {/* CEO Card */}
+        <article className="legacy-card legacy-card--ceo reveal-item">
+          <div className="legacy-card__image-wrapper legacy-card__image-wrapper--right">
+            <img src={img.ceo} alt="Sohaib Hassan" />
+            <div className="legacy-card__image-label legacy-card__image-label--ceo">
+              <span>A VISION FOR TODAY. A PROMISE FOR TOMORROW.</span>
+            </div>
+          </div>
+          <div className="legacy-card__divider legacy-card__divider--right"></div>
+          <div className="legacy-card__content legacy-card__content--left">
+            <small>CHIEF EXECUTIVE</small>
+            <h3>THE VISION THAT SHAPES OUR FUTURE</h3>
+            <div className="legacy-card__decoration">
+              <span></span>
+              <svg width="6" height="6" viewBox="0 0 6 6" fill="currentColor">
+                <circle cx="3" cy="3" r="3"/>
+              </svg>
+              <span></span>
+            </div>
+            <div className="legacy-card__quote-section">
+              <div className="legacy-card__quote-mark">"</div>
+              <p className="legacy-quote">We are creating spaces where future generations can thrive.</p>
+            </div>
+            <p className="legacy-card__body">It is a privilege to carry forward the legacy of Habib Rafiq Engineering (Pvt) Ltd. For over six decades, we set benchmarks in engineering excellence before expanding into real estate — making quality developments our trademark. Today, we develop well-planned, sustainable communities combining modern infrastructure with affordable living through Royal Swiss City. We remain committed to creating developments that enhance lifestyles and deliver lasting value for homeowners, investors, and future generations.</p>
+            <div className="legacy-card__signature">
+              <p><strong>Sohaib Hassan</strong></p>
+              <p>CHIEF EXECUTIVE</p>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      {/* Timeline Section */}
+      <div className="legacy-timeline">
+        <div className="timeline-item">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" strokeWidth="1.5"/>
+            <polyline points="9 22 9 12 15 12 15 22" strokeWidth="1.5"/>
+          </svg>
+          <p><strong>60+ YEARS OF LEGACY</strong></p>
+        </div>
+        <div className="timeline-connector"></div>
+        <div className="timeline-item">
+          <img src="/crowns.png" alt="Crown" style={{ width: "250px", height: "100px" }} />
+          <p><strong>THE NEXT CHAPTER</strong></p>
+        </div>
+        <div className="timeline-connector"></div>
+        <div className="timeline-item">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M3 21h18M3 7v13M21 7v13M5 3h14v4H5z" strokeWidth="1.5"/>
+            <line x1="9" y1="11" x2="9" y2="17" strokeWidth="1.5"/>
+            <line x1="13" y1="11" x2="13" y2="17" strokeWidth="1.5"/>
+            <line x1="17" y1="11" x2="17" y2="17" strokeWidth="1.5"/>
+          </svg>
+          <p><strong>A FUTURE BUILT TO LAST</strong></p>
+        </div>
+      </div>
+
+      <div style={{ textAlign: "center" }}><a href="/developer" style={{ background: "#c4b08a", color: "#111", border: "none", padding: "12px 28px", borderRadius: "999px", fontSize: "10px", letterSpacing: "2px", textTransform: "uppercase", textDecoration: "none", display: "inline-block", fontWeight: 500, transition: "all 0.3s ease", marginTop: "48px", marginBottom: "0px" }} onMouseEnter={(e) => { (e.target as HTMLElement).style.opacity = "0.7"; (e.target as HTMLElement).style.transform = "translateY(-2px)"; }} onMouseLeave={(e) => { (e.target as HTMLElement).style.opacity = "1"; (e.target as HTMLElement).style.transform = "translateY(0)"; }}>LEARN MORE ABOUT HRL</a></div>
+    </section>
 
     <section className="future-section reveal-section"><div style={{ display: "flex", flexDirection: "row", gap: "6vw", alignItems: "center", maxWidth: "100%", overflow: "hidden" }}><img src={img.green} alt="Green Energy" style={{ flex: "0 0 35%", minWidth: 0, objectFit: "cover", width: "100%", height: "400px" }} /><div style={{ flex: 1, minWidth: 0 }}><p className="section-kicker">THE FUTURE</p><h2 style={{ fontFamily: "var(--serif)", fontSize: "clamp(45px, 6vw, 85px)", fontWeight: 300, lineHeight: 0.84, marginBottom: "20px", color: "#111" }}>Built around<br /><em>sustainable living.</em></h2><p style={{ fontSize: "14px", lineHeight: 1.75, color: "#6b645c", maxWidth: "430px" }}>Royal Swiss City is designed with environmental responsibility at its core. From solar infrastructure to water management systems, every element reflects our commitment to creating a sustainable community for generations to come.</p></div></div><div style={{ marginTop: "60px", paddingBottom: "80px" }}><div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "12px", marginBottom: "40px" }} className="mobile-plot-options"><div style={{ background: "#fff", padding: "18px 12px", textAlign: "center", borderRadius: "8px", border: "1px solid #e0d9d1" }}><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#111" strokeWidth="1.5" style={{ display: "block", margin: "0 auto 8px" }}><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></svg><p style={{ fontSize: "8px", letterSpacing: "0.08em", textTransform: "uppercase", color: "#999", margin: "0 0 6px 0" }}>RESIDENTIAL</p><h3 style={{ fontSize: "12px", fontWeight: 400, color: "#111", margin: "0" }}>MARLA 3.5</h3></div><div style={{ background: "#fff", padding: "18px 12px", textAlign: "center", borderRadius: "8px", border: "1px solid #e0d9d1" }}><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#111" strokeWidth="1.5" style={{ display: "block", margin: "0 auto 8px" }}><path d="M3 10l1.05-3.15a1 1 0 0 1 .95-.85h14a1 1 0 0 1 .95.85L21 10M3 10v9a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-9M9 14h1M14 14h1M9 18h1M14 18h1" /></svg><p style={{ fontSize: "8px", letterSpacing: "0.08em", textTransform: "uppercase", color: "#999", margin: "0 0 6px 0" }}>RESIDENTIAL</p><h3 style={{ fontSize: "12px", fontWeight: 400, color: "#111", margin: "0" }}>MARLA 5</h3></div><div style={{ background: "#fff", padding: "18px 12px", textAlign: "center", borderRadius: "8px", border: "1px solid #e0d9d1" }}><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#111" strokeWidth="1.5" style={{ display: "block", margin: "0 auto 8px" }}><path d="M3 21h18M3 7v13M21 7v13M5 3h14v4H5z" /><line x1="9" y1="11" x2="9" y2="17" /><line x1="13" y1="11" x2="13" y2="17" /><line x1="17" y1="11" x2="17" y2="17" /></svg><p style={{ fontSize: "8px", letterSpacing: "0.08em", textTransform: "uppercase", color: "#999", margin: "0 0 6px 0" }}>COMMERCIAL</p><h3 style={{ fontSize: "12px", fontWeight: 400, color: "#111", margin: "0" }}>MARLA 2</h3></div><div style={{ background: "#fff", padding: "18px 12px", textAlign: "center", borderRadius: "8px", border: "1px solid #e0d9d1" }}><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#111" strokeWidth="1.5" style={{ display: "block", margin: "0 auto 8px" }}><path d="M3 21h18M3 7v13M21 7v13M5 3h14v4H5z" /><line x1="7" y1="11" x2="7" y2="17" /><line x1="11" y1="11" x2="11" y2="17" /><line x1="15" y1="11" x2="15" y2="17" /><line x1="19" y1="11" x2="19" y2="17" /></svg><p style={{ fontSize: "8px", letterSpacing: "0.08em", textTransform: "uppercase", color: "#999", margin: "0 0 6px 0" }}>COMMERCIAL</p><h3 style={{ fontSize: "12px", fontWeight: 400, color: "#111", margin: "0" }}>MARLA 4</h3></div></div><div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "20px", marginBottom: "40px" }} className="desktop-plot-options"><div style={{ background: "#fff", padding: "25px 15px", textAlign: "center", borderRadius: "8px", border: "1px solid #e0d9d1" }}><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#111" strokeWidth="1.5" style={{ display: "block", margin: "0 auto 12px" }}><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></svg><p style={{ fontSize: "10px", letterSpacing: "0.1em", textTransform: "uppercase", color: "#999", margin: "0 0 8px 0" }}>RESIDENTIAL</p><h3 style={{ fontSize: "16px", fontWeight: 400, color: "#111", margin: "0" }}>MARLA 3.5</h3></div><div style={{ background: "#fff", padding: "25px 15px", textAlign: "center", borderRadius: "8px", border: "1px solid #e0d9d1" }}><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#111" strokeWidth="1.5" style={{ display: "block", margin: "0 auto 12px" }}><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></svg><p style={{ fontSize: "10px", letterSpacing: "0.1em", textTransform: "uppercase", color: "#999", margin: "0 0 8px 0" }}>RESIDENTIAL</p><h3 style={{ fontSize: "16px", fontWeight: 400, color: "#111", margin: "0" }}>MARLA 5</h3></div><div style={{ background: "#fff", padding: "25px 15px", textAlign: "center", borderRadius: "8px", border: "1px solid #e0d9d1" }}><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#111" strokeWidth="1.5" style={{ display: "block", margin: "0 auto 12px" }}><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></svg><p style={{ fontSize: "10px", letterSpacing: "0.1em", textTransform: "uppercase", color: "#999", margin: "0 0 8px 0" }}>RESIDENTIAL</p><h3 style={{ fontSize: "16px", fontWeight: 400, color: "#111", margin: "0" }}>MARLA 10</h3></div><div style={{ background: "#fff", padding: "25px 15px", textAlign: "center", borderRadius: "8px", border: "1px solid #e0d9d1" }}><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#111" strokeWidth="1.5" style={{ display: "block", margin: "0 auto 12px" }}><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></svg><p style={{ fontSize: "10px", letterSpacing: "0.1em", textTransform: "uppercase", color: "#999", margin: "0 0 8px 0" }}>RESIDENTIAL</p><h3 style={{ fontSize: "16px", fontWeight: 400, color: "#111", margin: "0" }}>KANAL 1</h3></div><div style={{ background: "#fff", padding: "25px 15px", textAlign: "center", borderRadius: "8px", border: "1px solid #e0d9d1" }}><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#111" strokeWidth="1.5" style={{ display: "block", margin: "0 auto 12px" }}><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></svg><p style={{ fontSize: "10px", letterSpacing: "0.1em", textTransform: "uppercase", color: "#999", margin: "0 0 8px 0" }}>RESIDENTIAL</p><h3 style={{ fontSize: "16px", fontWeight: 400, color: "#111", margin: "0" }}>KANAL 2</h3></div><div style={{ background: "#fff", padding: "25px 15px", textAlign: "center", borderRadius: "8px", border: "1px solid #e0d9d1" }}><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#111" strokeWidth="1.5" style={{ display: "block", margin: "0 auto 12px" }}><path d="M3 21h18M3 7v13M21 7v13M5 3h14v4H5z" /><line x1="9" y1="11" x2="9" y2="17" /><line x1="13" y1="11" x2="13" y2="17" /><line x1="17" y1="11" x2="17" y2="17" /></svg><p style={{ fontSize: "10px", letterSpacing: "0.1em", textTransform: "uppercase", color: "#999", margin: "0 0 8px 0" }}>COMMERCIAL</p><h3 style={{ fontSize: "16px", fontWeight: 400, color: "#111", margin: "0" }}>MARLA 2</h3></div><div style={{ background: "#fff", padding: "25px 15px", textAlign: "center", borderRadius: "8px", border: "1px solid #e0d9d1" }}><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#111" strokeWidth="1.5" style={{ display: "block", margin: "0 auto 12px" }}><path d="M3 21h18M3 7v13M21 7v13M5 3h14v4H5z" /><line x1="9" y1="11" x2="9" y2="17" /><line x1="13" y1="11" x2="13" y2="17" /><line x1="17" y1="11" x2="17" y2="17" /></svg><p style={{ fontSize: "10px", letterSpacing: "0.1em", textTransform: "uppercase", color: "#999", margin: "0 0 8px 0" }}>COMMERCIAL</p><h3 style={{ fontSize: "16px", fontWeight: 400, color: "#111", margin: "0" }}>MARLA 4</h3></div><div style={{ background: "#fff", padding: "25px 15px", textAlign: "center", borderRadius: "8px", border: "1px solid #e0d9d1" }}><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#111" strokeWidth="1.5" style={{ display: "block", margin: "0 auto 12px" }}><path d="M3 21h18M3 7v13M21 7v13M5 3h14v4H5z" /><line x1="9" y1="11" x2="9" y2="17" /><line x1="13" y1="11" x2="13" y2="17" /><line x1="17" y1="11" x2="17" y2="17" /></svg><p style={{ fontSize: "10px", letterSpacing: "0.1em", textTransform: "uppercase", color: "#999", margin: "0 0 8px 0" }}>COMMERCIAL</p><h3 style={{ fontSize: "16px", fontWeight: 400, color: "#111", margin: "0" }}>MARLA 8</h3></div></div><div style={{ textAlign: "center" }}><a href="/enquire" style={{ background: "#c4b08a", color: "#111", border: "none", padding: "12px 28px", borderRadius: "999px", fontSize: "10px", letterSpacing: "2px", textTransform: "uppercase", textDecoration: "none", display: "inline-block", fontWeight: 500, transition: "all 0.3s ease" }} onMouseEnter={(e) => { (e.target as HTMLElement).style.opacity = "0.7"; (e.target as HTMLElement).style.transform = "translateY(-2px)"; }} onMouseLeave={(e) => { (e.target as HTMLElement).style.opacity = "1"; (e.target as HTMLElement).style.transform = "translateY(0)"; }}>EXPLORE ALL OPTIONS</a></div></div></section>
 
