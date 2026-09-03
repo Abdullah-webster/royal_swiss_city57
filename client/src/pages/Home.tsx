@@ -194,32 +194,32 @@ export default function Home() {
     {/* Sustainability Icons */}
     <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "30px", marginTop: "60px", marginBottom: "60px", textAlign: "center" }}>
       <div>
-        <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: "60px", height: "60px", borderRadius: "50%", border: "1.5px solid #C1883A", marginBottom: "12px" }}>
-          <Leaf size={28} color="#C1883A" strokeWidth={1.5} />
+        <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: "60px", height: "60px", borderRadius: "50%", border: "1.5px solid #ffe893ff", marginBottom: "12px" }}>
+          <Leaf size={28} color="#ffe893ff" strokeWidth={1.5} />
         </div>
         <h3 style={{ fontSize: "11px", fontWeight: 600, color: "#111", margin: "0 0 4px 0", textTransform: "uppercase", letterSpacing: "0.08em" }}>GREEN SPACES</h3>
         <p style={{ fontSize: "10px", color: "#6b645c", margin: "0", lineHeight: 1.4 }}>For a healthier life</p>
       </div>
       
       <div>
-        <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: "60px", height: "60px", borderRadius: "50%", border: "1.5px solid #C1883A", marginBottom: "12px" }}>
-          <Droplets size={28} color="#C1883A" strokeWidth={1.5} />
+        <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: "60px", height: "60px", borderRadius: "50%", border: "1.5px solid #ffe893ff", marginBottom: "12px" }}>
+          <Droplets size={28} color="#ffe893ff" strokeWidth={1.5} />
         </div>
         <h3 style={{ fontSize: "11px", fontWeight: 600, color: "#111", margin: "0 0 4px 0", textTransform: "uppercase", letterSpacing: "0.08em" }}>WATER SENSITIVE</h3>
         <p style={{ fontSize: "10px", color: "#6b645c", margin: "0", lineHeight: 1.4 }}>Sustainable systems</p>
       </div>
       
       <div>
-        <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: "60px", height: "60px", borderRadius: "50%", border: "1.5px solid #C1883A", marginBottom: "12px" }}>
-          <Recycle size={28} color="#C1883A" strokeWidth={1.5} />
+        <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: "60px", height: "60px", borderRadius: "50%", border: "1.5px solid #ffe893ff", marginBottom: "12px" }}>
+          <Recycle size={28} color="#ffe893ff" strokeWidth={1.5} />
         </div>
         <h3 style={{ fontSize: "11px", fontWeight: 600, color: "#111", margin: "0 0 4px 0", textTransform: "uppercase", letterSpacing: "0.08em" }}>CLEAN ENERGY</h3>
         <p style={{ fontSize: "10px", color: "#6b645c", margin: "0", lineHeight: 1.4 }}>For a better future</p>
       </div>
       
       <div>
-        <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: "60px", height: "60px", borderRadius: "50%", border: "1.5px solid #C1883A", marginBottom: "12px" }}>
-          <Users size={28} color="#C1883A" strokeWidth={1.5} />
+        <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: "60px", height: "60px", borderRadius: "50%", border: "1.5px solid #ffe893ff", marginBottom: "12px" }}>
+          <Users size={28} color="#ffe893ff" strokeWidth={1.5} />
         </div>
         <h3 style={{ fontSize: "11px", fontWeight: 600, color: "#111", margin: "0 0 4px 0", textTransform: "uppercase", letterSpacing: "0.08em" }}>COMMUNITY FIRST</h3>
         <p style={{ fontSize: "10px", color: "#6b645c", margin: "0", lineHeight: 1.4 }}>Stronger together</p>
