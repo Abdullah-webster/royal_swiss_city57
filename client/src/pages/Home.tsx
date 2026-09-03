@@ -171,8 +171,7 @@ export default function Home() {
         </div>
         <div className="timeline-connector"></div>
         <div className="timeline-item">
-          <img src="/crowns.png" alt="Crown" style={{ width: "250px", height: "100px" }} />
-          <p><strong>THE NEXT CHAPTER</strong></p>
+          <p><strong>  </strong></p>
         </div>
         <div className="timeline-connector"></div>
         <div className="timeline-item">
