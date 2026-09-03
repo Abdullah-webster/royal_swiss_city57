@@ -3011,7 +3011,7 @@ a {
 .showcase-section {
     background: linear-gradient(135deg, #fae3bb 0%, #c9bfb3 50%, #d6d0c6 100%);
     min-height: 860px;
-    padding: 7vw 8vw 2vw 8vw;
+    padding: 7vw 8vw 0vw 8vw;
     position: relative;
     z-index: 3;
     overflow-y: auto;
