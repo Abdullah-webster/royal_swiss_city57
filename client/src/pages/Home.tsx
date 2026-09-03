@@ -81,7 +81,7 @@ export default function Home() {
       {/* Section Header */}
       <div className="legacy-section-header">
         <div className="header-title">
-          <img src="/crowns.png" alt="Crown" className="crown-icon" style={{ width: "320px", height: "150px" }} />
+          
           <h2>LEADERSHIP & LEGACY</h2>
         </div>
         <p className="header-subtitle">TWO GENERATIONS. ONE ENDURING VISION.</p>
