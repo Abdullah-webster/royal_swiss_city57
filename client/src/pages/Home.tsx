@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ChevronDown, ChevronRight, Menu, X, ArrowDown, Instagram, Facebook, Linkedin, Youtube } from "lucide-react";
+import { ChevronDown, ChevronRight, Menu, X, ArrowDown, Instagram, Facebook, Linkedin, Youtube, Leaf, Droplets, Recycle, Users } from "lucide-react";
 import { HeroCapsuleAnimation } from "@/components/HeroCapsuleAnimation";
 import { ShowcaseCarousel } from "@/components/ShowcaseCarousel";
 import { animateLegacySection, animateFooter, animateShowcaseSection } from "@/utils/sectionAnimations";
@@ -194,50 +194,38 @@ export default function Home() {
     {/* Sustainability Icons */}
     <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "30px", marginTop: "60px", marginBottom: "60px", textAlign: "center" }}>
       <div>
-        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#C1883A" strokeWidth="1.5" style={{ display: "block", margin: "0 auto 16px" }}>
-          <circle cx="12" cy="12" r="10" fill="none"/>
-          <path d="M12 6c0-2 1-3 1-3s1 1 1 3c0 1.5-.5 2.5-1 3s-1-1.5-1-3zM8 10c-1.5.5-2.5 1-3 2s.5 2 2 2.5c1 .3 2 .2 2.5-.5M16 10c1.5.5 2.5 1 3 2s-.5 2-2 2.5c-1 .3-2 .2-2.5-.5M10 15c0 1.5.5 2.5 1 3s1-1.5 1-3"/>
-          <path d="M12 18v3" strokeLinecap="round"/>
-        </svg>
+        <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: "80px", height: "80px", borderRadius: "50%", border: "2px solid #C1883A", marginBottom: "16px" }}>
+          <Leaf size={40} color="#C1883A" strokeWidth={1.5} />
+        </div>
         <h3 style={{ fontSize: "14px", fontWeight: 600, color: "#111", margin: "0 0 8px 0", textTransform: "uppercase", letterSpacing: "0.08em" }}>GREEN SPACES</h3>
         <p style={{ fontSize: "12px", color: "#6b645c", margin: "0", lineHeight: 1.5 }}>For a healthier life</p>
       </div>
       
       <div>
-        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#C1883A" strokeWidth="1.5" style={{ display: "block", margin: "0 auto 16px" }}>
-          <circle cx="12" cy="12" r="10" fill="none"/>
-          <path d="M12 6c0-1 .5-2.5 0-3s-1 1.5-1 3c0 2 .5 4 1 5s1-3 1-5z"/>
-          <path d="M12 11c1 1 2 3 2 5s-1 4-2 5-2-3-2-5 1-4 2-5z" fill="#C1883A" opacity="0.3"/>
-          <path d="M12 16v5M8 12h8" strokeLinecap="round"/>
-        </svg>
+        <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: "80px", height: "80px", borderRadius: "50%", border: "2px solid #C1883A", marginBottom: "16px" }}>
+          <Droplets size={40} color="#C1883A" strokeWidth={1.5} />
+        </div>
         <h3 style={{ fontSize: "14px", fontWeight: 600, color: "#111", margin: "0 0 8px 0", textTransform: "uppercase", letterSpacing: "0.08em" }}>WATER SENSITIVE</h3>
         <p style={{ fontSize: "12px", color: "#6b645c", margin: "0", lineHeight: 1.5 }}>Sustainable systems</p>
       </div>
       
       <div>
-        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#C1883A" strokeWidth="1.5" style={{ display: "block", margin: "0 auto 16px" }}>
-          <circle cx="12" cy="12" r="10" fill="none"/>
-          <path d="M12 4c-4.41 0-8 3.59-8 8s3.59 8 8 8 8-3.59 8-8-3.59-8-8-8z"/>
-          <path d="M12 6L16 14M12 6L8 14M12 6V14" strokeLinecap="round" strokeLinejoin="round"/>
-          <circle cx="12" cy="18" r="1.5" fill="#C1883A"/>
-        </svg>
+        <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: "80px", height: "80px", borderRadius: "50%", border: "2px solid #C1883A", marginBottom: "16px" }}>
+          <Recycle size={40} color="#C1883A" strokeWidth={1.5} />
+        </div>
         <h3 style={{ fontSize: "14px", fontWeight: 600, color: "#111", margin: "0 0 8px 0", textTransform: "uppercase", letterSpacing: "0.08em" }}>CLEAN ENERGY</h3>
         <p style={{ fontSize: "12px", color: "#6b645c", margin: "0", lineHeight: 1.5 }}>For a better future</p>
       </div>
       
       <div>
-        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#C1883A" strokeWidth="1.5" style={{ display: "block", margin: "0 auto 16px" }}>
-          <circle cx="12" cy="12" r="10" fill="none"/>
-          <circle cx="8" cy="8" r="2" fill="#C1883A"/>
-          <circle cx="16" cy="8" r="2" fill="#C1883A"/>
-          <circle cx="12" cy="15" r="2.5" fill="#C1883A"/>
-          <path d="M8 10v2c0 1 .5 2 2 2h4c1.5 0 2-1 2-2v-2" strokeLinecap="round"/>
-          <path d="M9 14c0 1-.5 2.5-1 3M15 14c0 1 .5 2.5 1 3" strokeLinecap="round"/>
-        </svg>
+        <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: "80px", height: "80px", borderRadius: "50%", border: "2px solid #C1883A", marginBottom: "16px" }}>
+          <Users size={40} color="#C1883A" strokeWidth={1.5} />
+        </div>
         <h3 style={{ fontSize: "14px", fontWeight: 600, color: "#111", margin: "0 0 8px 0", textTransform: "uppercase", letterSpacing: "0.08em" }}>COMMUNITY FIRST</h3>
         <p style={{ fontSize: "12px", color: "#6b645c", margin: "0", lineHeight: 1.5 }}>Stronger together</p>
       </div>
     </div>
+
     
     <div style={{ marginTop: "0px", paddingBottom: "80px" }}><div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "12px", marginBottom: "40px" }} className="mobile-plot-options"><div style={{ background: "#fff", padding: "18px 12px", textAlign: "center", borderRadius: "8px", border: "1px solid #e0d9d1" }}><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#111" strokeWidth="1.5" style={{ display: "block", margin: "0 auto 8px" }}><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></svg><p style={{ fontSize: "8px", letterSpacing: "0.08em", textTransform: "uppercase", color: "#999", margin: "0 0 6px 0" }}>RESIDENTIAL</p><h3 style={{ fontSize: "12px", fontWeight: 400, color: "#111", margin: "0" }}>MARLA 3.5</h3></div><div style={{ background: "#fff", padding: "18px 12px", textAlign: "center", borderRadius: "8px", border: "1px solid #e0d9d1" }}><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#111" strokeWidth="1.5" style={{ display: "block", margin: "0 auto 8px" }}><path d="M3 10l1.05-3.15a1 1 0 0 1 .95-.85h14a1 1 0 0 1 .95.85L21 10M3 10v9a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-9M9 14h1M14 14h1M9 18h1M14 18h1" /></svg><p style={{ fontSize: "8px", letterSpacing: "0.08em", textTransform: "uppercase", color: "#999", margin: "0 0 6px 0" }}>RESIDENTIAL</p><h3 style={{ fontSize: "12px", fontWeight: 400, color: "#111", margin: "0" }}>MARLA 5</h3></div><div style={{ background: "#fff", padding: "18px 12px", textAlign: "center", borderRadius: "8px", border: "1px solid #e0d9d1" }}><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#111" strokeWidth="1.5" style={{ display: "block", margin: "0 auto 8px" }}><path d="M3 21h18M3 7v13M21 7v13M5 3h14v4H5z" /><line x1="9" y1="11" x2="9" y2="17" /><line x1="13" y1="11" x2="13" y2="17" /><line x1="17" y1="11" x2="17" y2="17" /></svg><p style={{ fontSize: "8px", letterSpacing: "0.08em", textTransform: "uppercase", color: "#999", margin: "0 0 6px 0" }}>COMMERCIAL</p><h3 style={{ fontSize: "12px", fontWeight: 400, color: "#111", margin: "0" }}>MARLA 2</h3></div><div style={{ background: "#fff", padding: "18px 12px", textAlign: "center", borderRadius: "8px", border: "1px solid #e0d9d1" }}><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#111" strokeWidth="1.5" style={{ display: "block", margin: "0 auto 8px" }}><path d="M3 21h18M3 7v13M21 7v13M5 3h14v4H5z" /><line x1="7" y1="11" x2="7" y2="17" /><line x1="11" y1="11" x2="11" y2="17" /><line x1="15" y1="11" x2="15" y2="17" /><line x1="19" y1="11" x2="19" y2="17" /></svg><p style={{ fontSize: "8px", letterSpacing: "0.08em", textTransform: "uppercase", color: "#999", margin: "0 0 6px 0" }}>COMMERCIAL</p><h3 style={{ fontSize: "12px", fontWeight: 400, color: "#111", margin: "0" }}>MARLA 4</h3></div></div><div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "20px", marginBottom: "40px" }} className="desktop-plot-options"><div style={{ background: "#fff", padding: "25px 15px", textAlign: "center", borderRadius: "8px", border: "1px solid #e0d9d1" }}><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#111" strokeWidth="1.5" style={{ display: "block", margin: "0 auto 12px" }}><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></svg><p style={{ fontSize: "10px", letterSpacing: "0.1em", textTransform: "uppercase", color: "#999", margin: "0 0 8px 0" }}>RESIDENTIAL</p><h3 style={{ fontSize: "16px", fontWeight: 400, color: "#111", margin: "0" }}>MARLA 3.5</h3></div><div style={{ background: "#fff", padding: "25px 15px", textAlign: "center", borderRadius: "8px", border: "1px solid #e0d9d1" }}><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#111" strokeWidth="1.5" style={{ display: "block", margin: "0 auto 12px" }}><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></svg><p style={{ fontSize: "10px", letterSpacing: "0.1em", textTransform: "uppercase", color: "#999", margin: "0 0 8px 0" }}>RESIDENTIAL</p><h3 style={{ fontSize: "16px", fontWeight: 400, color: "#111", margin: "0" }}>MARLA 5</h3></div><div style={{ background: "#fff", padding: "25px 15px", textAlign: "center", borderRadius: "8px", border: "1px solid #e0d9d1" }}><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#111" strokeWidth="1.5" style={{ display: "block", margin: "0 auto 12px" }}><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></svg><p style={{ fontSize: "10px", letterSpacing: "0.1em", textTransform: "uppercase", color: "#999", margin: "0 0 8px 0" }}>RESIDENTIAL</p><h3 style={{ fontSize: "16px", fontWeight: 400, color: "#111", margin: "0" }}>MARLA 10</h3></div><div style={{ background: "#fff", padding: "25px 15px", textAlign: "center", borderRadius: "8px", border: "1px solid #e0d9d1" }}><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#111" strokeWidth="1.5" style={{ display: "block", margin: "0 auto 12px" }}><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></svg><p style={{ fontSize: "10px", letterSpacing: "0.1em", textTransform: "uppercase", color: "#999", margin: "0 0 8px 0" }}>RESIDENTIAL</p><h3 style={{ fontSize: "16px", fontWeight: 400, color: "#111", margin: "0" }}>KANAL 1</h3></div><div style={{ background: "#fff", padding: "25px 15px", textAlign: "center", borderRadius: "8px", border: "1px solid #e0d9d1" }}><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#111" strokeWidth="1.5" style={{ display: "block", margin: "0 auto 12px" }}><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></svg><p style={{ fontSize: "10px", letterSpacing: "0.1em", textTransform: "uppercase", color: "#999", margin: "0 0 8px 0" }}>RESIDENTIAL</p><h3 style={{ fontSize: "16px", fontWeight: 400, color: "#111", margin: "0" }}>KANAL 2</h3></div><div style={{ background: "#fff", padding: "25px 15px", textAlign: "center", borderRadius: "8px", border: "1px solid #e0d9d1" }}><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#111" strokeWidth="1.5" style={{ display: "block", margin: "0 auto 12px" }}><path d="M3 21h18M3 7v13M21 7v13M5 3h14v4H5z" /><line x1="9" y1="11" x2="9" y2="17" /><line x1="13" y1="11" x2="13" y2="17" /><line x1="17" y1="11" x2="17" y2="17" /></svg><p style={{ fontSize: "10px", letterSpacing: "0.1em", textTransform: "uppercase", color: "#999", margin: "0 0 8px 0" }}>COMMERCIAL</p><h3 style={{ fontSize: "16px", fontWeight: 400, color: "#111", margin: "0" }}>MARLA 2</h3></div><div style={{ background: "#fff", padding: "25px 15px", textAlign: "center", borderRadius: "8px", border: "1px solid #e0d9d1" }}><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#111" strokeWidth="1.5" style={{ display: "block", margin: "0 auto 12px" }}><path d="M3 21h18M3 7v13M21 7v13M5 3h14v4H5z" /><line x1="9" y1="11" x2="9" y2="17" /><line x1="13" y1="11" x2="13" y2="17" /><line x1="17" y1="11" x2="17" y2="17" /></svg><p style={{ fontSize: "10px", letterSpacing: "0.1em", textTransform: "uppercase", color: "#999", margin: "0 0 8px 0" }}>COMMERCIAL</p><h3 style={{ fontSize: "16px", fontWeight: 400, color: "#111", margin: "0" }}>MARLA 4</h3></div><div style={{ background: "#fff", padding: "25px 15px", textAlign: "center", borderRadius: "8px", border: "1px solid #e0d9d1" }}><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#111" strokeWidth="1.5" style={{ display: "block", margin: "0 auto 12px" }}><path d="M3 21h18M3 7v13M21 7v13M5 3h14v4H5z" /><line x1="9" y1="11" x2="9" y2="17" /><line x1="13" y1="11" x2="13" y2="17" /><line x1="17" y1="11" x2="17" y2="17" /></svg><p style={{ fontSize: "10px", letterSpacing: "0.1em", textTransform: "uppercase", color: "#999", margin: "0 0 8px 0" }}>COMMERCIAL</p><h3 style={{ fontSize: "16px", fontWeight: 400, color: "#111", margin: "0" }}>MARLA 8</h3></div></div><div style={{ textAlign: "center" }}><a href="/enquire" style={{ background: "#c4b08a", color: "#111", border: "none", padding: "12px 28px", borderRadius: "999px", fontSize: "10px", letterSpacing: "2px", textTransform: "uppercase", textDecoration: "none", display: "inline-block", fontWeight: 500, transition: "all 0.3s ease" }} onMouseEnter={(e) => { (e.target as HTMLElement).style.opacity = "0.7"; (e.target as HTMLElement).style.transform = "translateY(-2px)"; }} onMouseLeave={(e) => { (e.target as HTMLElement).style.opacity = "1"; (e.target as HTMLElement).style.transform = "translateY(0)"; }}>EXPLORE ALL OPTIONS</a></div></div></section>
 
