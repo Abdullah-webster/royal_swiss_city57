@@ -195,8 +195,9 @@ export default function Home() {
     <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "30px", marginTop: "60px", marginBottom: "60px", textAlign: "center" }}>
       <div>
         <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#C1883A" strokeWidth="1.5" style={{ display: "block", margin: "0 auto 16px" }}>
-          <path d="M12 2c1.1 0 2 .9 2 2v3.03C16.39 7.71 19 10.57 19 14c0 3.59-2.72 6.56-6.2 6.97V22c0 .55-.45 1-1 1s-1-.45-1-1v-1.03C7.61 20.29 5 17.43 5 14c0-3.59 2.72-6.56 6.2-6.97V4c0-1.1.9-2 2-2z"/>
-          <path d="M12 9c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5z" fill="#C1883A" opacity="0.2"/>
+          <circle cx="12" cy="12" r="10" fill="none"/>
+          <path d="M12 6c0-2 1-3 1-3s1 1 1 3c0 1.5-.5 2.5-1 3s-1-1.5-1-3zM8 10c-1.5.5-2.5 1-3 2s.5 2 2 2.5c1 .3 2 .2 2.5-.5M16 10c1.5.5 2.5 1 3 2s-.5 2-2 2.5c-1 .3-2 .2-2.5-.5M10 15c0 1.5.5 2.5 1 3s1-1.5 1-3"/>
+          <path d="M12 18v3" strokeLinecap="round"/>
         </svg>
         <h3 style={{ fontSize: "14px", fontWeight: 600, color: "#111", margin: "0 0 8px 0", textTransform: "uppercase", letterSpacing: "0.08em" }}>GREEN SPACES</h3>
         <p style={{ fontSize: "12px", color: "#6b645c", margin: "0", lineHeight: 1.5 }}>For a healthier life</p>
@@ -204,10 +205,10 @@ export default function Home() {
       
       <div>
         <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#C1883A" strokeWidth="1.5" style={{ display: "block", margin: "0 auto 16px" }}>
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
-          <path d="M12 4v7l5.25 3.15" fill="none"/>
-          <circle cx="12" cy="12" r="2" fill="#C1883A"/>
-          <path d="M12 15c-1.1 0-2 .9-2 2v2c0 1.1.9 2 2 2s2-.9 2-2v-2c0-1.1-.9-2-2-2z" fill="#C1883A" opacity="0.3"/>
+          <circle cx="12" cy="12" r="10" fill="none"/>
+          <path d="M12 6c0-1 .5-2.5 0-3s-1 1.5-1 3c0 2 .5 4 1 5s1-3 1-5z"/>
+          <path d="M12 11c1 1 2 3 2 5s-1 4-2 5-2-3-2-5 1-4 2-5z" fill="#C1883A" opacity="0.3"/>
+          <path d="M12 16v5M8 12h8" strokeLinecap="round"/>
         </svg>
         <h3 style={{ fontSize: "14px", fontWeight: 600, color: "#111", margin: "0 0 8px 0", textTransform: "uppercase", letterSpacing: "0.08em" }}>WATER SENSITIVE</h3>
         <p style={{ fontSize: "12px", color: "#6b645c", margin: "0", lineHeight: 1.5 }}>Sustainable systems</p>
@@ -215,8 +216,10 @@ export default function Home() {
       
       <div>
         <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#C1883A" strokeWidth="1.5" style={{ display: "block", margin: "0 auto 16px" }}>
-          <path d="M7.5 7.5c-2.12 2.12-2.12 5.56 0 7.68m9-9c2.12 2.12 2.12 5.56 0 7.68M12 4c-4.24 4.24-4.24 11.12 0 15.36m0 0c4.24-4.24 4.24-11.12 0-15.36"/>
-          <circle cx="12" cy="12" r="2" fill="#C1883A"/>
+          <circle cx="12" cy="12" r="10" fill="none"/>
+          <path d="M12 4c-4.41 0-8 3.59-8 8s3.59 8 8 8 8-3.59 8-8-3.59-8-8-8z"/>
+          <path d="M12 6L16 14M12 6L8 14M12 6V14" strokeLinecap="round" strokeLinejoin="round"/>
+          <circle cx="12" cy="18" r="1.5" fill="#C1883A"/>
         </svg>
         <h3 style={{ fontSize: "14px", fontWeight: 600, color: "#111", margin: "0 0 8px 0", textTransform: "uppercase", letterSpacing: "0.08em" }}>CLEAN ENERGY</h3>
         <p style={{ fontSize: "12px", color: "#6b645c", margin: "0", lineHeight: 1.5 }}>For a better future</p>
@@ -224,8 +227,12 @@ export default function Home() {
       
       <div>
         <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#C1883A" strokeWidth="1.5" style={{ display: "block", margin: "0 auto 16px" }}>
-          <circle cx="8" cy="9" r="2"/><circle cx="16" cy="9" r="2"/><circle cx="12" cy="17" r="2"/>
-          <path d="M8 11v3c0 1.66 1.34 3 3 3h2c1.66 0 3-1.34 3-3v-3M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+          <circle cx="12" cy="12" r="10" fill="none"/>
+          <circle cx="8" cy="8" r="2" fill="#C1883A"/>
+          <circle cx="16" cy="8" r="2" fill="#C1883A"/>
+          <circle cx="12" cy="15" r="2.5" fill="#C1883A"/>
+          <path d="M8 10v2c0 1 .5 2 2 2h4c1.5 0 2-1 2-2v-2" strokeLinecap="round"/>
+          <path d="M9 14c0 1-.5 2.5-1 3M15 14c0 1 .5 2.5 1 3" strokeLinecap="round"/>
         </svg>
         <h3 style={{ fontSize: "14px", fontWeight: 600, color: "#111", margin: "0 0 8px 0", textTransform: "uppercase", letterSpacing: "0.08em" }}>COMMUNITY FIRST</h3>
         <p style={{ fontSize: "12px", color: "#6b645c", margin: "0", lineHeight: 1.5 }}>Stronger together</p>
