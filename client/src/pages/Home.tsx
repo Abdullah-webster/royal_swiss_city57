@@ -226,7 +226,7 @@ export default function Home() {
       </div>
     </div>
 
-    <div style={{ marginTop: "0px", paddingBottom: "80px" }}>
+    <div style={{ marginTop: "0px", paddingBottom: "80px", background: "linear-gradient(135deg, #fae3bb 0%, #c9bfb3 50%, #d6d0c6 100%)", padding: "60px 40px" }}>
       <div style={{ textAlign: "center", marginBottom: "40px" }}>
         <p style={{ fontSize: "12px", letterSpacing: "0.15em", textTransform: "uppercase", color: "#c4b08a", margin: "0 0 12px 0", fontWeight: 500 }}>THE OPPORTUNITY</p>
         <h2 style={{ fontSize: "clamp(32px, 5vw, 56px)", fontFamily: "var(--serif)", fontWeight: 300, color: "#111", margin: "0", lineHeight: 1.2 }}>YOUR PLACE IN<br />WHAT COMES NEXT</h2>
