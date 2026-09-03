@@ -171,10 +171,6 @@ export default function Home() {
         </div>
         <div className="timeline-connector"></div>
         <div className="timeline-item">
-          <p><strong>  </strong></p>
-        </div>
-        <div className="timeline-connector"></div>
-        <div className="timeline-item">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
             <path d="M3 21h18M3 7v13M21 7v13M5 3h14v4H5z" strokeWidth="1.5"/>
             <line x1="9" y1="11" x2="9" y2="17" strokeWidth="1.5"/>
